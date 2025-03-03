@@ -1,0 +1,24 @@
+# Игнорируем папку с изображениями, так как она не нужна для работы сервиса
+images/
+
+# Игнорируем файлы Git
+.git
+.gitignore
+.gitattributes
+
+# Игнорируем кэш Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Игнорируем файлы IDE
+.vscode/
+.idea/
+
+# Игнорируем логи
+*.log
+
+# Игнорируем временные файлы
+*.tmp
+*.temp
+cropped_image.jpg 

@@ -1,0 +1,11 @@
+[project]
+name = "ml-start-2025-intensive-i"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pillow>=11.1.0",
+    "torch>=2.6.0",
+    "yaml",
+]

@@ -1,0 +1,18 @@
+{
+	"service_params": {
+		"target_width": 1920,
+		"target_height": 1080
+	},
+	"classes_info": {
+		"classes": ["human", "wind/sup-board", "boat", "bouy", "sailboat", "kayak"]
+	},
+	"logging_params": {
+		"save_logs": true,
+		"logs_directory": "./src/logs",
+		"logging_config": "./src/log_config.yaml"
+	},
+	"common_params": {
+		"host": "localhost",
+		"port": 8000
+	}
+}
