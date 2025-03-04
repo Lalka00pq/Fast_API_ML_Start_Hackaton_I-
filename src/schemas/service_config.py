@@ -21,20 +21,30 @@ class CommonParams(BaseModel):
     """Порт сервиса"""
 
 
-class ServiceParams(BaseModel):
-    """Датакласс, описываемый основные параметры сервиса"""
+class DetectorParams(BaseModel):
+    """Датакласс, описывающий параметры детектора"""
+    detector_name: str = Field(default="YOLO11")
+    detector_model_format: str = Field(default="pt")
+    model_path: str = Field(default="./src/models/detectors/yolo11s")
+    confidence_thershold: float = Field(default=0.25)
+    nms_threshold: float = Field(default=0.5)
+    use_cuda: bool = Field(default=True)
 
-    target_width: int = Field(default=1920)
-    """Целевая ширина изображения"""
-    target_height: int = Field(default=1080)
-    """Целевая высота изображения"""
+
+class ClassifierParams(BaseModel):
+    """Датакласс, описывающий параметры классификатора"""
+    classifier_name: str = Field(default="RESNET18")
+    classifier_model_format: str = Field(default="onnx")
+    model_path: str = Field(default="./src/models/classifiers/resnet18")
+    use_cuda: bool = Field(default=True)
 
 
 class ServiceConfig(BaseModel):
     """Конфигурация сервиса"""
-
-    service_params: ServiceParams = Field(default=ServiceParams())
-    """Основные параметры сервиса"""
+    detectors_params: DetectorParams = Field(default=DetectorParams())
+    """Параметры детектора"""
+    classifiers_params: ClassifierParams = Field(default=ClassifierParams())
+    """Параметры классификатора"""
     logging_params: LoggingParams = Field(default=LoggingParams())
     """Параметры логирования"""
     common_params: CommonParams = Field(default=CommonParams())

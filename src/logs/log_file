@@ -1,30 +1,20 @@
-2025-03-02 17:42:55,916 - fastapi - INFO - Конфигурация сервиса: .\src\configs\service_config.json
-2025-03-02 17:42:55,926 - uvicorn.error - INFO - Started server process [15572]
-2025-03-02 17:42:55,928 - uvicorn.error - INFO - Waiting for application startup.
-2025-03-02 17:42:55,931 - uvicorn.error - INFO - Application startup complete.
-2025-03-02 17:42:55,938 - uvicorn.error - INFO - Uvicorn running on http://localhost:8000 (Press CTRL+C to quit)
-2025-03-02 17:43:06,284 - uvicorn.access - INFO - 127.0.0.1:64501 - "GET / HTTP/1.1" 404
-2025-03-02 17:43:06,539 - uvicorn.access - INFO - 127.0.0.1:64501 - "GET /favicon.ico HTTP/1.1" 404
-2025-03-02 17:43:15,028 - uvicorn.access - INFO - 127.0.0.1:64708 - "GET /docs HTTP/1.1" 200
-2025-03-02 17:43:15,262 - uvicorn.access - INFO - 127.0.0.1:64708 - "GET /openapi.json HTTP/1.1" 200
-2025-03-02 17:43:31,091 - fastapi - INFO - Загружен детектор - YOLO8
-2025-03-02 17:43:32,172 - fastapi - INFO - Загружен классификатор - Resnet18
-2025-03-02 17:43:32,189 - fastapi - INFO - Обнаружен объект с координатами (1873, 44, 1919, 94)
-2025-03-02 17:43:32,267 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 64%
-2025-03-02 17:43:32,272 - fastapi - INFO - Обнаружен объект с координатами (1818, 133, 1920, 195)
-2025-03-02 17:43:32,334 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 64%
-2025-03-02 17:43:32,340 - fastapi - INFO - Обнаружен объект с координатами (1236, 14, 1289, 68)
-2025-03-02 17:43:32,431 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 64%
-2025-03-02 17:43:32,437 - fastapi - INFO - Обнаружен объект с координатами (1727, 302, 1782, 354)
-2025-03-02 17:43:32,496 - fastapi - INFO - Объект классифицирован как human с вероятностью 62%
-2025-03-02 17:43:32,500 - fastapi - INFO - Обнаружен объект с координатами (1585, 152, 1637, 205)
-2025-03-02 17:43:32,551 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 62%
-2025-03-02 17:43:32,563 - fastapi - INFO - Обнаружен объект с координатами (1517, 213, 1565, 260)
-2025-03-02 17:43:32,614 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 60%
-2025-03-02 17:43:32,619 - fastapi - INFO - Обнаружен объект с координатами (1648, 373, 1706, 424)
-2025-03-02 17:43:32,661 - fastapi - INFO - Объект классифицирован как human с вероятностью 58%
-2025-03-02 17:43:32,666 - fastapi - INFO - Обнаружен объект с координатами (1452, 39, 1512, 92)
-2025-03-02 17:43:32,726 - fastapi - INFO - Объект классифицирован как human с вероятностью 54%
-2025-03-02 17:43:32,730 - fastapi - INFO - Обнаружен объект с координатами (1571, 13, 1621, 61)
-2025-03-02 17:43:32,783 - fastapi - INFO - Объект классифицирован как human с вероятностью 53%
-2025-03-02 17:43:32,814 - uvicorn.access - INFO - 127.0.0.1:65068 - "POST /inference HTTP/1.1" 200
+2025-03-04 17:42:01,089 - fastapi - INFO - Конфигурация сервиса: .\src\configs\service_config.json
+2025-03-04 17:42:01,105 - uvicorn.error - INFO - Started server process [13432]
+2025-03-04 17:42:01,107 - uvicorn.error - INFO - Waiting for application startup.
+2025-03-04 17:42:01,109 - uvicorn.error - INFO - Application startup complete.
+2025-03-04 17:42:01,117 - uvicorn.error - INFO - Uvicorn running on http://localhost:8000 (Press CTRL+C to quit)
+2025-03-04 17:42:03,562 - uvicorn.access - INFO - 127.0.0.1:50529 - "GET /docs HTTP/1.1" 200
+2025-03-04 17:42:03,823 - uvicorn.access - INFO - 127.0.0.1:50529 - "GET /openapi.json HTTP/1.1" 200
+2025-03-04 17:42:15,129 - fastapi - INFO - Загружен детектор - YOLO11 
+2025-03-04 17:42:15,675 - fastapi - INFO - Загружен классификатор - RESNET18
+2025-03-04 17:42:15,684 - fastapi - INFO - Объекты на изображении не обнаружены
+2025-03-04 17:42:15,691 - uvicorn.access - INFO - 127.0.0.1:50789 - "POST /inference?path_to_detector=YOLO11&path_to_classifier=RESNET18&detector_model_format=pt&classifier_model_format=onnx&use_cude=true HTTP/1.1" 200
+2025-03-04 17:43:43,643 - fastapi - INFO - Загружен детектор - YOLO11 
+2025-03-04 17:43:44,128 - fastapi - INFO - Загружен классификатор - RESNET18
+2025-03-04 17:43:44,133 - fastapi - INFO - Обнаружен объект с координатами (446, 340, 592, 413)
+2025-03-04 17:43:44,183 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 66%
+2025-03-04 17:43:44,191 - uvicorn.access - INFO - 127.0.0.1:52790 - "POST /inference?path_to_detector=YOLO11&path_to_classifier=RESNET18&detector_model_format=pt&classifier_model_format=onnx&use_cude=true HTTP/1.1" 200
+2025-03-04 17:43:58,430 - uvicorn.error - INFO - Shutting down
+2025-03-04 17:43:58,539 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-03-04 17:43:58,542 - uvicorn.error - INFO - Application shutdown complete.
+2025-03-04 17:43:58,545 - uvicorn.error - INFO - Finished server process [13432]

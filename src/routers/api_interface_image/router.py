@@ -7,6 +7,7 @@ from fastapi import APIRouter, File, UploadFile
 from PIL import Image
 from pydantic import TypeAdapter
 import io
+import torch
 import onnxruntime as ort
 from torchvision import transforms
 from ultralytics import YOLO
@@ -59,7 +60,12 @@ def preprocess_image(image_path: str) -> np.ndarray:
     "/inference",
     summary="Выполняет инференс изображения."
 )
-async def inference(image: UploadFile = File(...)) -> DetectedAndClassifiedObject:
+async def inference(path_to_detector: str = service_config_python.detectors_params.detector_name,
+                    path_to_classifier: str = service_config_python.classifiers_params.classifier_name,
+                    detector_model_format: str = service_config_python.detectors_params.detector_model_format,
+                    classifier_model_format: str = service_config_python.classifiers_params.classifier_model_format,
+                    image: UploadFile = File(...),
+                    use_cude: bool = service_config_python.detectors_params.use_cuda) -> DetectedAndClassifiedObject:
     """Метод для инференса изображения
 
     Args:
@@ -68,6 +74,11 @@ async def inference(image: UploadFile = File(...)) -> DetectedAndClassifiedObjec
     Returns:
         InferenceResult: Результат инференса
     """
+    if torch.cuda.is_available() and use_cude:
+        device = 'cuda'
+    else:
+        device = 'cpu'
+
     classes_name = ['human',
                     'wind/sup-board',
                     'boat',
@@ -76,15 +87,20 @@ async def inference(image: UploadFile = File(...)) -> DetectedAndClassifiedObjec
                     'kayak']
     image = Image.open(io.BytesIO(image.file.read())).convert('RGB')
     orig_img = np.array(image)
-    detector = YOLO("src/models/detectors/best.pt")
+    path_to_detector = service_config_python.detectors_params.model_path + \
+        '.' + detector_model_format
+    detector = YOLO(path_to_detector).to(device)
     logger.info(
-        "Загружен детектор - YOLO8"
+        f"Загружен детектор - {service_config_python.detectors_params.detector_name} "
     )
     detect_result = detector(image)
-    classifier = ort.InferenceSession(
-        'src/models/classifiers/resnet18_classifier.onnx')
+    path_to_classifier = service_config_python.classifiers_params.model_path + \
+        '.' + classifier_model_format
+    # Добавить вариант того что модель не в формате onnx
+    classifier = ort.InferenceSession(path_to_classifier,
+                                      providers=['CPUExecutionProvider', 'CUDAExecutionProvider'])
     logger.info(
-        "Загружен классификатор - Resnet18"
+        f"Загружен классификатор - {service_config_python.classifiers_params.classifier_name}"
     )
     detected_objects = []
     for box in detect_result[0].boxes:
@@ -121,7 +137,7 @@ async def inference(image: UploadFile = File(...)) -> DetectedAndClassifiedObjec
         ))
     if len(detected_objects) == 0:
         logger.info(
-            "Объекты не обнаружены"
+            "Объекты на изображении не обнаружены"
         )
         return DetectedAndClassifiedObject(object_bbox=None)
     return DetectedAndClassifiedObject(object_bbox=detected_objects)

@@ -1,7 +1,17 @@
 {
-	"service_params": {
-		"target_width": 1920,
-		"target_height": 1080
+	"detector_params": {
+		"detector_name": "YOLO11",
+		"detector_model_format": "pt",
+		"model_path": "./src/models/detectors/yolo11s",
+		"confidence_thershold": 0.25,
+		"nms_threshold": 0.5,
+		"use_cuda": true
+	},
+	"classifier_params": {
+		"classifier_name": "RESNET18",
+		"classifier_model_format": "onnx",
+		"model_path": "./src/models/classifiers/resnet18",
+		"use_cuda": true
 	},
 	"classes_info": {
 		"classes": ["human", "wind/sup-board", "boat", "bouy", "sailboat", "kayak"]

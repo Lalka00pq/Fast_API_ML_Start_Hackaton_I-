@@ -1,5 +1,6 @@
 # python
 from datetime import datetime
+from typing import List
 
 # 3rdparty
 from pydantic import Field, BaseModel
@@ -25,15 +26,35 @@ class GetClassesOutput(BaseModel):
     """Список классов"""
 
 
-class ServiceOutput(BaseModel):
-    """Датаконтракт выхода сервиса"""
+class InferenceResult(BaseModel):
+    """Модель для результата инференса изображения"""
     class_name: str
     """Имя класса"""
     x: int
     """Координата x"""
     y: int
     """Координата y"""
-    width: int = Field(default=640)
-    """Ширина преобразованного изображения"""
-    height: int = Field(default=480)
-    """Высота преобразованного изображения"""
+    width: int
+    """Ширина"""
+    height: int
+    """Высота"""
+
+
+class DetectedAndClassifiedObject(BaseModel):
+    """ Датакласс данных которые будут возвращены сервисом (детекция и классификация) """
+    object_bbox: List[InferenceResult] | None
+    """ Координаты объекта """
+
+
+# class ServiceOutput(BaseModel):
+#     """Датаконтракт выхода сервиса"""
+#     class_name: str
+#     """Имя класса"""
+#     x: int
+#     """Координата x"""
+#     y: int
+#     """Координата y"""
+#     width: int = Field(default=640)
+#     """Ширина преобразованного изображения"""
+#     height: int = Field(default=480)
+#     """Высота преобразованного изображения"""
