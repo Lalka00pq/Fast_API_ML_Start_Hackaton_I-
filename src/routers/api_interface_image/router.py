@@ -96,7 +96,7 @@ async def inference(path_to_detector: str = service_config_python.detectors_para
     detect_result = detector(image)
     path_to_classifier = service_config_python.classifiers_params.model_path + \
         '.' + classifier_model_format
-    # Добавить вариант того что модель не в формате onnx
+    # Добавить вариант того что модель не в формате onnx. Разобраться с gpu
     classifier = ort.InferenceSession(path_to_classifier,
                                       providers=['CPUExecutionProvider', 'CUDAExecutionProvider'])
     logger.info(
@@ -108,7 +108,7 @@ async def inference(path_to_detector: str = service_config_python.detectors_para
         xmin, ymin, xmax, ymax = box.xyxy[0].tolist()
 
         confidence = box.conf.item()
-        if confidence < 0.5:
+        if confidence < service_config_python.detectors_params.confidence_thershold:
             continue
         cropped_object = orig_img[int(ymin):int(ymax), int(xmin):int(xmax)]
         cropped_image = Image.fromarray(cropped_object)
