@@ -31,6 +31,12 @@ class DetectorParams(BaseModel):
     use_cuda: bool = Field(default=True)
 
 
+class ClassesInfo(BaseModel):
+    """Датакласс, описывающий названия классов"""
+    classes_name: list = Field(
+        default=["human", "wind/sup-board", "boat", "bouy", "sailboat", "kayak"])
+
+
 class ClassifierParams(BaseModel):
     """Датакласс, описывающий параметры классификатора"""
     classifier_name: str = Field(default="RESNET18")
@@ -45,6 +51,8 @@ class ServiceConfig(BaseModel):
     """Параметры детектора"""
     classifiers_params: ClassifierParams = Field(default=ClassifierParams())
     """Параметры классификатора"""
+    classes_info: ClassesInfo = Field(default=ClassesInfo())
+    """Названия классов"""
     logging_params: LoggingParams = Field(default=LoggingParams())
     """Параметры логирования"""
     common_params: CommonParams = Field(default=CommonParams())

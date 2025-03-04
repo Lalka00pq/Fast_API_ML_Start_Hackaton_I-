@@ -78,13 +78,10 @@ async def inference(path_to_detector: str = service_config_python.detectors_para
         device = 'cuda'
     else:
         device = 'cpu'
-
-    classes_name = ['human',
-                    'wind/sup-board',
-                    'boat',
-                    'bouy',
-                    'sailboat',
-                    'kayak']
+    logger.info(
+        f"Используется {device} для выполнения инференса"
+    )
+    classes_name = service_config_python.classes_info.classes_name
     image = Image.open(io.BytesIO(image.file.read())).convert('RGB')
     orig_img = np.array(image)
     path_to_detector = service_config_python.detectors_params.model_path + \
