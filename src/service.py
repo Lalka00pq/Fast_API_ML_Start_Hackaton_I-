@@ -4,7 +4,6 @@ import json
 import logging
 import threading
 import time
-import os
 
 # 3rdparty
 import uvicorn
@@ -13,23 +12,32 @@ from src.schemas.service_config import ServiceConfig
 
 # project
 from src.tools.logging_tools import configure_service_logger
+from src.tools.logging_health import HealthMonitor
 
 
 class Server(uvicorn.Server):
     """Обертка над uvicorn.Server, не блокирующая основной поток"""
 
+    def __init__(self, config: uvicorn.Config):
+        super().__init__(config)
+        self._server_started = threading.Event()
+
     @contextlib.contextmanager
     def run_in_thread(self):
         """Метод для запуска сервиса в потоке"""
-        thread = threading.Thread(target=self.run)
+        thread = threading.Thread(target=self._run_server)
         thread.start()
         try:
-            while not self.started and thread.is_alive():
-                time.sleep(1e-3)
+            self._server_started.wait()
             yield
         finally:
             self.should_exit = True
             thread.join()
+
+    def _run_server(self):
+        """Запуск сервера с отслеживанием состояния"""
+        self._server_started.set()
+        self.run()
 
 
 def get_service(
@@ -73,7 +81,18 @@ def main() -> None:
     service_config_python = service_config_adapter.validate_python(
         service_config_dict)
 
-    get_service(service_config_python).run()
+    # Создаем сервис
+    server = get_service(service_config_python)
+
+    # Создаем монитор здоровья
+    base_url = f"http://{service_config_python.common_params.host}:{service_config_python.common_params.port}"
+    health_monitor = HealthMonitor(base_url)
+
+    with server.run_in_thread():
+        time.sleep(15)
+        health_monitor.start()
+        while True:
+            time.sleep(1)
 
 
 if __name__ == "__main__":

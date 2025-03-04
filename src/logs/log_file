@@ -1,20 +1,14 @@
-2025-03-04 17:42:01,089 - fastapi - INFO - Конфигурация сервиса: .\src\configs\service_config.json
-2025-03-04 17:42:01,105 - uvicorn.error - INFO - Started server process [13432]
-2025-03-04 17:42:01,107 - uvicorn.error - INFO - Waiting for application startup.
-2025-03-04 17:42:01,109 - uvicorn.error - INFO - Application startup complete.
-2025-03-04 17:42:01,117 - uvicorn.error - INFO - Uvicorn running on http://localhost:8000 (Press CTRL+C to quit)
-2025-03-04 17:42:03,562 - uvicorn.access - INFO - 127.0.0.1:50529 - "GET /docs HTTP/1.1" 200
-2025-03-04 17:42:03,823 - uvicorn.access - INFO - 127.0.0.1:50529 - "GET /openapi.json HTTP/1.1" 200
-2025-03-04 17:42:15,129 - fastapi - INFO - Загружен детектор - YOLO11 
-2025-03-04 17:42:15,675 - fastapi - INFO - Загружен классификатор - RESNET18
-2025-03-04 17:42:15,684 - fastapi - INFO - Объекты на изображении не обнаружены
-2025-03-04 17:42:15,691 - uvicorn.access - INFO - 127.0.0.1:50789 - "POST /inference?path_to_detector=YOLO11&path_to_classifier=RESNET18&detector_model_format=pt&classifier_model_format=onnx&use_cude=true HTTP/1.1" 200
-2025-03-04 17:43:43,643 - fastapi - INFO - Загружен детектор - YOLO11 
-2025-03-04 17:43:44,128 - fastapi - INFO - Загружен классификатор - RESNET18
-2025-03-04 17:43:44,133 - fastapi - INFO - Обнаружен объект с координатами (446, 340, 592, 413)
-2025-03-04 17:43:44,183 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 66%
-2025-03-04 17:43:44,191 - uvicorn.access - INFO - 127.0.0.1:52790 - "POST /inference?path_to_detector=YOLO11&path_to_classifier=RESNET18&detector_model_format=pt&classifier_model_format=onnx&use_cude=true HTTP/1.1" 200
-2025-03-04 17:43:58,430 - uvicorn.error - INFO - Shutting down
-2025-03-04 17:43:58,539 - uvicorn.error - INFO - Waiting for application shutdown.
-2025-03-04 17:43:58,542 - uvicorn.error - INFO - Application shutdown complete.
-2025-03-04 17:43:58,545 - uvicorn.error - INFO - Finished server process [13432]
+2025-03-04 20:15:24,803 - fastapi - INFO - Конфигурация сервиса: .\src\configs\service_config.json
+2025-03-04 20:15:24,832 - uvicorn.error - INFO - Started server process [14828]
+2025-03-04 20:15:24,838 - uvicorn.error - INFO - Waiting for application startup.
+2025-03-04 20:15:24,839 - uvicorn.error - INFO - Application startup complete.
+2025-03-04 20:15:24,851 - uvicorn.error - INFO - Uvicorn running on http://localhost:8000 (Press CTRL+C to quit)
+2025-03-04 20:15:31,407 - uvicorn.access - INFO - ::1:55612 - "GET /health HTTP/1.1" 200
+2025-03-04 20:15:51,424 - uvicorn.access - INFO - ::1:55844 - "GET /health HTTP/1.1" 200
+2025-03-04 20:16:11,441 - uvicorn.access - INFO - ::1:56075 - "GET /health HTTP/1.1" 200
+2025-03-04 20:16:31,467 - uvicorn.access - INFO - ::1:56303 - "GET /health HTTP/1.1" 200
+2025-03-04 20:16:51,482 - uvicorn.access - INFO - ::1:56535 - "GET /health HTTP/1.1" 200
+2025-03-04 20:17:02,186 - uvicorn.error - INFO - Shutting down
+2025-03-04 20:17:02,303 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-03-04 20:17:02,307 - uvicorn.error - INFO - Application shutdown complete.
+2025-03-04 20:17:02,310 - uvicorn.error - INFO - Finished server process [14828]
