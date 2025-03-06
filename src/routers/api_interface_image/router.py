@@ -1,22 +1,21 @@
 # python
 import json
-
+import io
 # 3rdparty
 import numpy as np
 from fastapi import APIRouter, File, UploadFile
 from PIL import Image
 from pydantic import TypeAdapter
-import io
+
 import torch
-import onnxruntime as ort
 from torchvision import transforms
 import ultralytics
-import os
-from src.datacontracts.inference_results import InferenceResult, DetectedAndClassifiedObject
+
 
 # project
 from src.schemas.service_config import ServiceConfig
 from src.tools.logging_tools import get_logger
+from src.datacontracts.inference_results import InferenceResult, DetectedAndClassifiedObject
 
 logger = get_logger()
 
@@ -84,6 +83,9 @@ async def inference(path_to_detector: str = service_config_python.detectors_para
         device = 'cpu'
     else:
         device = 'cpu'
+    logger.info(
+        f"Устройство для выполнения инференса - {device}"
+    )
     detected_objects = []
     logger.info(
         f"Путь к модели - {path_to_detector}"
@@ -104,8 +106,7 @@ async def inference(path_to_detector: str = service_config_python.detectors_para
         try:
             image_for_detect = Image.open(
                 io.BytesIO(image.file.read())).convert('RGB')
-            result = detector_model(image_for_detect)
-            logger.info(result)
+            result = detector_model(image_for_detect, device=device)
         except Exception as e:
             logger.error(
                 f"Ошибка при загрузке изображения: {e}"
