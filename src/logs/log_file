@@ -1,171 +1,623 @@
-2025-03-06 19:06:25,185 - fastapi - INFO - Конфигурация сервиса: .\src\configs\service_config.json
-2025-03-06 19:06:25,214 - uvicorn.error - INFO - Started server process [28528]
-2025-03-06 19:06:25,214 - uvicorn.error - INFO - Waiting for application startup.
-2025-03-06 19:06:25,214 - uvicorn.error - INFO - Application startup complete.
-2025-03-06 19:06:25,230 - uvicorn.error - INFO - Uvicorn running on http://localhost:8000 (Press CTRL+C to quit)
-2025-03-06 19:06:27,721 - fastapi - INFO - CUDA не доступна на устройстве. Используется CPU для выполнения инференса
-2025-03-06 19:06:27,724 - fastapi - INFO - Используется cpu для выполнения инференса
-2025-03-06 19:06:27,739 - fastapi - INFO - Загружается детектор - ./src/models/detectors/yolo11n.pt
-2025-03-06 19:06:27,813 - fastapi - INFO - Загружен детектор - YOLO11 на устройстве cpu
-2025-03-06 19:06:28,072 - fastapi - INFO - Загружен классификатор - RESNET18
-2025-03-06 19:06:28,075 - fastapi - INFO - Обнаружен объект wind_sup-board с координатами (469, 343, 595, 416), 0.84%
-2025-03-06 19:06:28,079 - fastapi - INFO - Обнаружен объект human с координатами (1070, 576, 1137, 647), 0.80%
-2025-03-06 19:06:28,085 - fastapi - INFO - Обнаружен объект wind_sup-board с координатами (558, 549, 696, 617), 0.78%
-2025-03-06 19:06:28,087 - fastapi - INFO - Обнаружен объект human с координатами (991, 304, 1032, 349), 0.76%
-2025-03-06 19:06:28,091 - fastapi - INFO - Обнаружен объект human с координатами (1443, 487, 1487, 528), 0.75%
-2025-03-06 19:06:28,093 - fastapi - INFO - Обнаружен объект human с координатами (1310, 515, 1356, 557), 0.74%
-2025-03-06 19:06:28,096 - fastapi - INFO - Обнаружен объект wind_sup-board с координатами (972, 855, 1040, 983), 0.73%
-2025-03-06 19:06:28,100 - fastapi - INFO - Обнаружен объект human с координатами (1355, 444, 1394, 483), 0.71%
-2025-03-06 19:06:28,104 - fastapi - INFO - Обнаружен объект human с координатами (889, 73, 927, 115), 0.69%
-2025-03-06 19:06:28,107 - fastapi - INFO - Обнаружен объект human с координатами (326, 371, 378, 412), 0.68%
-2025-03-06 19:06:28,110 - fastapi - INFO - Обнаружен объект human с координатами (1019, 676, 1059, 714), 0.67%
-2025-03-06 19:06:28,113 - fastapi - INFO - Обнаружен объект human с координатами (1391, 478, 1432, 517), 0.66%
-2025-03-06 19:06:28,118 - fastapi - INFO - Обнаружен объект human с координатами (1216, 561, 1252, 599), 0.65%
-2025-03-06 19:06:28,122 - fastapi - INFO - Обнаружен объект human с координатами (1200, 784, 1259, 846), 0.64%
-2025-03-06 19:06:28,126 - fastapi - INFO - Обнаружен объект human с координатами (1206, 609, 1248, 657), 0.62%
-2025-03-06 19:06:28,128 - fastapi - INFO - Обнаружен объект human с координатами (1169, 543, 1208, 585), 0.62%
-2025-03-06 19:06:28,132 - fastapi - INFO - Обнаружен объект human с координатами (965, 541, 1004, 581), 0.61%
-2025-03-06 19:06:28,135 - fastapi - INFO - Обнаружен объект human с координатами (1071, 450, 1106, 485), 0.59%
-2025-03-06 19:06:28,138 - fastapi - INFO - Обнаружен объект human с координатами (1134, 496, 1170, 536), 0.59%
-2025-03-06 19:06:28,141 - fastapi - INFO - Обнаружен объект human с координатами (958, 620, 992, 661), 0.59%
-2025-03-06 19:06:28,143 - fastapi - INFO - Обнаружен объект human с координатами (1176, 609, 1231, 663), 0.58%
-2025-03-06 19:06:28,150 - fastapi - INFO - Обнаружен объект human с координатами (1098, 496, 1132, 532), 0.57%
-2025-03-06 19:06:28,153 - fastapi - INFO - Обнаружен объект human с координатами (849, 425, 885, 459), 0.56%
-2025-03-06 19:06:28,156 - fastapi - INFO - Обнаружен объект human с координатами (969, 430, 1006, 468), 0.56%
-2025-03-06 19:06:28,160 - fastapi - INFO - Обнаружен объект human с координатами (558, 481, 616, 524), 0.55%
-2025-03-06 19:06:28,163 - fastapi - INFO - Обнаружен объект human с координатами (1020, 363, 1071, 406), 0.54%
-2025-03-06 19:06:28,164 - fastapi - INFO - Обнаружен объект human с координатами (985, 596, 1027, 656), 0.53%
-2025-03-06 19:06:28,167 - fastapi - INFO - Обнаружен объект human с координатами (1254, 642, 1288, 682), 0.53%
-2025-03-06 19:06:28,171 - fastapi - INFO - Обнаружен объект human с координатами (445, 334, 489, 374), 0.52%
-2025-03-06 19:06:28,174 - fastapi - INFO - Обнаружен объект human с координатами (631, 290, 664, 330), 0.52%
-2025-03-06 19:06:28,177 - fastapi - INFO - Обнаружен объект human с координатами (566, 556, 606, 595), 0.51%
-2025-03-06 19:06:28,180 - fastapi - INFO - Обнаружен объект human с координатами (1017, 567, 1052, 606), 0.45%
-2025-03-06 19:06:28,183 - fastapi - INFO - Обнаружен объект human с координатами (647, 573, 685, 614), 0.41%
-2025-03-06 19:06:28,186 - fastapi - INFO - Обнаружен объект human с координатами (601, 561, 644, 604), 0.37%
-2025-03-06 19:06:28,189 - fastapi - INFO - Обнаружен объект human с координатами (1157, 541, 1196, 582), 0.36%
-2025-03-06 19:06:28,192 - fastapi - INFO - Обнаружен объект human с координатами (510, 360, 554, 403), 0.25%
-2025-03-06 19:06:28,198 - uvicorn.access - INFO - 127.0.0.1:60506 - "POST /inference?path_to_detector=.%2Fsrc%2Fmodels%2Fdetectors%2Fyolo11n&path_to_classifier=.%2Fsrc%2Fmodels%2Fclassifiers%2Fresnet18&detector_model_format=pt&classifier_model_format=onnx&use_cude=true&confidence_thershold=0.25&nms_threshold=0.5 HTTP/1.1" 200
-2025-03-06 19:06:32,401 - fastapi - INFO - Мониторинг сервиса запущен
-2025-03-06 19:06:34,420 - uvicorn.access - INFO - ::1:60659 - "GET /health HTTP/1.1" 200
-2025-03-06 19:06:34,424 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:06:54,432 - uvicorn.access - INFO - ::1:61130 - "GET /health HTTP/1.1" 200
-2025-03-06 19:06:54,435 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:07:14,447 - uvicorn.access - INFO - ::1:61589 - "GET /health HTTP/1.1" 200
-2025-03-06 19:07:14,450 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:07:34,471 - uvicorn.access - INFO - ::1:62049 - "GET /health HTTP/1.1" 200
-2025-03-06 19:07:34,474 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:07:54,494 - uvicorn.access - INFO - ::1:62514 - "GET /health HTTP/1.1" 200
-2025-03-06 19:07:54,496 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:08:14,512 - uvicorn.access - INFO - ::1:63012 - "GET /health HTTP/1.1" 200
-2025-03-06 19:08:14,515 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:08:34,525 - uvicorn.access - INFO - ::1:63495 - "GET /health HTTP/1.1" 200
-2025-03-06 19:08:34,528 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:08:54,538 - uvicorn.access - INFO - ::1:64016 - "GET /health HTTP/1.1" 200
-2025-03-06 19:08:54,538 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:09:14,562 - uvicorn.access - INFO - ::1:64485 - "GET /health HTTP/1.1" 200
-2025-03-06 19:09:14,564 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:09:34,578 - uvicorn.access - INFO - ::1:64948 - "GET /health HTTP/1.1" 200
-2025-03-06 19:09:34,581 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:09:54,586 - uvicorn.access - INFO - ::1:65399 - "GET /health HTTP/1.1" 200
-2025-03-06 19:09:54,588 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:10:14,599 - uvicorn.access - INFO - ::1:49740 - "GET /health HTTP/1.1" 200
-2025-03-06 19:10:14,601 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:10:34,611 - uvicorn.access - INFO - ::1:50259 - "GET /health HTTP/1.1" 200
-2025-03-06 19:10:34,614 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:10:54,630 - uvicorn.access - INFO - ::1:50721 - "GET /health HTTP/1.1" 200
-2025-03-06 19:10:54,633 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:11:14,646 - uvicorn.access - INFO - ::1:51200 - "GET /health HTTP/1.1" 200
-2025-03-06 19:11:14,650 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:11:34,660 - uvicorn.access - INFO - ::1:51655 - "GET /health HTTP/1.1" 200
-2025-03-06 19:11:34,663 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:11:42,592 - uvicorn.access - INFO - 127.0.0.1:51888 - "GET /docs HTTP/1.1" 200
-2025-03-06 19:11:42,883 - uvicorn.access - INFO - 127.0.0.1:51888 - "GET /openapi.json HTTP/1.1" 200
-2025-03-06 19:11:54,676 - uvicorn.access - INFO - ::1:52212 - "GET /health HTTP/1.1" 200
-2025-03-06 19:11:54,679 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:11:59,629 - fastapi - INFO - CUDA не доступна на устройстве. Используется CPU для выполнения инференса
-2025-03-06 19:11:59,631 - fastapi - INFO - Используется cpu для выполнения инференса
-2025-03-06 19:11:59,633 - fastapi - INFO - Загружается детектор - ./src/models/detectors/yolo11s.onnx
-2025-03-06 19:11:59,635 - uvicorn.access - INFO - 127.0.0.1:52325 - "POST /inference?path_to_detector=.%2Fsrc%2Fmodels%2Fdetectors%2Fyolo11s&detector_model_format=onnx&use_cude=true&confidence_thershold=0.25&nms_threshold=0.5 HTTP/1.1" 500
-2025-03-06 19:11:59,637 - uvicorn.error - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
-    result = await app(  # type: ignore[func-returns-value]
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
-    return await self.app(scope, receive, send)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
-    await super().__call__(scope, receive, send)
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\applications.py", line 123, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
-    raise exc
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
-    await self.app(scope, receive, _send)
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
-    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
-    raise exc
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
-    await app(scope, receive, sender)
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\routing.py", line 758, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\routing.py", line 778, in app
-    await route.handle(scope, receive, send)
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\routing.py", line 299, in handle
-    await self.app(scope, receive, send)
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\routing.py", line 79, in app
-    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
-    raise exc
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
-    await app(scope, receive, sender)
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\routing.py", line 74, in app
-    response = await func(request)
-               ^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\fastapi\routing.py", line 278, in app
-    raw_response = await run_endpoint_function(
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
-    return await dependant.call(**values)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\src\routers\api_interface_image\router.py", line 95, in inference
-    )
-      
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1343, in to
-    return self._apply(convert)
-           ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\ultralytics\engine\model.py", line 885, in _apply
-    self._check_is_pytorch_model()
-  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\ultralytics\engine\model.py", line 324, in _check_is_pytorch_model
-    raise TypeError(
-TypeError: model='./src/models/detectors/yolo11s.onnx' should be a *.pt PyTorch model to run this method, but is a different format. PyTorch models can train, val, predict and export, i.e. 'model.train(data=...)', but exported formats like ONNX, TensorRT etc. only support 'predict' and 'val' modes, i.e. 'yolo predict model=yolo11n.onnx'.
-To run CUDA or MPS inference please pass the device argument directly in your inference command, i.e. 'model.predict(source=..., device=0)'
-2025-03-06 19:12:14,694 - uvicorn.access - INFO - ::1:52672 - "GET /health HTTP/1.1" 200
-2025-03-06 19:12:14,696 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:12:34,709 - uvicorn.access - INFO - ::1:53136 - "GET /health HTTP/1.1" 200
-2025-03-06 19:12:34,712 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:12:54,731 - uvicorn.access - INFO - ::1:53604 - "GET /health HTTP/1.1" 200
-2025-03-06 19:12:54,734 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:13:14,750 - uvicorn.access - INFO - ::1:54077 - "GET /health HTTP/1.1" 200
-2025-03-06 19:13:14,752 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:13:34,757 - uvicorn.access - INFO - ::1:54544 - "GET /health HTTP/1.1" 200
-2025-03-06 19:13:34,761 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:13:54,775 - uvicorn.access - INFO - ::1:55021 - "GET /health HTTP/1.1" 200
-2025-03-06 19:13:54,778 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:14:14,812 - uvicorn.access - INFO - ::1:55484 - "GET /health HTTP/1.1" 200
-2025-03-06 19:14:14,813 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:14:34,826 - uvicorn.access - INFO - ::1:55952 - "GET /health HTTP/1.1" 200
-2025-03-06 19:14:34,829 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:14:54,836 - uvicorn.access - INFO - ::1:56406 - "GET /health HTTP/1.1" 200
-2025-03-06 19:14:54,838 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:15:14,856 - uvicorn.access - INFO - ::1:56857 - "GET /health HTTP/1.1" 200
-2025-03-06 19:15:14,859 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:15:34,879 - uvicorn.access - INFO - ::1:57308 - "GET /health HTTP/1.1" 200
-2025-03-06 19:15:34,882 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:15:54,902 - uvicorn.access - INFO - ::1:57772 - "GET /health HTTP/1.1" 200
-2025-03-06 19:15:54,902 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:16:14,918 - uvicorn.access - INFO - ::1:58221 - "GET /health HTTP/1.1" 200
-2025-03-06 19:16:14,921 - fastapi - INFO - Сервис работает исправно
-2025-03-06 19:16:34,935 - uvicorn.access - INFO - ::1:58673 - "GET /health HTTP/1.1" 200
-2025-03-06 19:16:34,938 - fastapi - INFO - Сервис работает исправно
+2025-03-06 20:55:00,240 - fastapi - INFO - Конфигурация сервиса: .\src\configs\service_config.json
+2025-03-06 20:55:00,254 - uvicorn.error - INFO - Started server process [12952]
+2025-03-06 20:55:00,256 - uvicorn.error - INFO - Waiting for application startup.
+2025-03-06 20:55:00,258 - uvicorn.error - INFO - Application startup complete.
+2025-03-06 20:55:00,265 - uvicorn.error - INFO - Uvicorn running on http://localhost:8000 (Press CTRL+C to quit)
+2025-03-06 20:55:08,231 - fastapi - INFO - Мониторинг сервиса запущен
+2025-03-06 20:55:10,238 - uvicorn.access - INFO - ::1:53601 - "GET /health HTTP/1.1" 200
+2025-03-06 20:55:10,253 - fastapi - INFO - Сервис работает исправно
+2025-03-06 20:55:16,774 - fastapi - INFO - CUDA не доступна на устройстве. Используется CPU для выполнения инференса
+2025-03-06 20:55:16,776 - fastapi - INFO - Путь к модели - ./src/models/detectors/yolo11m
+2025-03-06 20:55:16,779 - fastapi - INFO - Загружена модель - YOLO11
+2025-03-06 20:55:17,437 - fastapi - INFO - [ultralytics.engine.results.Results object with attributes:
+
+boxes: ultralytics.engine.results.Boxes object
+keypoints: None
+masks: None
+names: {0: 'human', 1: 'wind/sup-board', 2: 'boat', 3: 'bouy', 4: 'sailboat', 5: 'kayak'}
+obb: None
+orig_img: array([[[ 88, 168, 155],
+        [ 91, 171, 158],
+        [ 89, 169, 156],
+        ...,
+        [149, 208, 200],
+        [149, 206, 198],
+        [147, 204, 196]],
+
+       [[ 89, 169, 156],
+        [ 93, 173, 160],
+        [ 88, 168, 155],
+        ...,
+        [144, 203, 195],
+        [147, 204, 196],
+        [148, 205, 197]],
+
+       [[ 91, 170, 157],
+        [ 94, 173, 160],
+        [ 92, 171, 158],
+        ...,
+        [140, 200, 192],
+        [144, 203, 195],
+        [148, 207, 199]],
+
+       ...,
+
+       [[ 40,  56,  33],
+        [ 39,  55,  32],
+        [ 39,  55,  32],
+        ...,
+        [117, 128, 108],
+        [115, 126, 106],
+        [111, 122, 102]],
+
+       [[ 39,  55,  32],
+        [ 39,  55,  32],
+        [ 39,  55,  32],
+        ...,
+        [118, 129, 109],
+        [118, 129, 109],
+        [116, 127, 107]],
+
+       [[ 38,  54,  31],
+        [ 39,  55,  32],
+        [ 39,  55,  32],
+        ...,
+        [118, 129, 109],
+        [119, 130, 110],
+        [118, 129, 109]]], dtype=uint8)
+orig_shape: (1080, 1920)
+path: 'image0.jpg'
+probs: None
+save_dir: 'c:\\Users\\User\\Desktop\\ML_projects\\My_repo\\runs\\detect\\predict13'
+speed: {'preprocess': 4.9991607666015625, 'inference': 351.4695167541504, 'postprocess': 3.0088424682617188}]
+2025-03-06 20:55:17,458 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([1.])
+conf: tensor([0.8853])
+data: tensor([[564.6456, 549.5863, 689.9117, 616.5602,   0.8853,   1.0000]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[627.2787, 583.0732, 125.2661,  66.9739]])
+xywhn: tensor([[0.3267, 0.5399, 0.0652, 0.0620]])
+xyxy: tensor([[564.6456, 549.5863, 689.9117, 616.5602]])
+xyxyn: tensor([[0.2941, 0.5089, 0.3593, 0.5709]])
+2025-03-06 20:55:17,471 - fastapi - INFO - Обнаружен объект wind/sup-board с координатами (564, 549, 689, 616), уверенность - 0.89
+2025-03-06 20:55:17,474 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([1.])
+conf: tensor([0.8492])
+data: tensor([[9.6417e+02, 8.6041e+02, 1.0469e+03, 9.8225e+02, 8.4922e-01, 1.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1005.5113,  921.3296,   82.6781,  121.8490]])
+xywhn: tensor([[0.5237, 0.8531, 0.0431, 0.1128]])
+xyxy: tensor([[ 964.1722,  860.4051, 1046.8503,  982.2541]])
+xyxyn: tensor([[0.5022, 0.7967, 0.5452, 0.9095]])
+2025-03-06 20:55:17,485 - fastapi - INFO - Обнаружен объект wind/sup-board с координатами (964, 860, 1046, 982), уверенность - 0.85
+2025-03-06 20:55:17,488 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([1.])
+conf: tensor([0.8195])
+data: tensor([[469.0815, 345.7619, 592.2395, 414.4949,   0.8195,   1.0000]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[530.6605, 380.1284, 123.1580,  68.7330]])
+xywhn: tensor([[0.2764, 0.3520, 0.0641, 0.0636]])
+xyxy: tensor([[469.0815, 345.7619, 592.2395, 414.4949]])
+xyxyn: tensor([[0.2443, 0.3201, 0.3085, 0.3838]])
+2025-03-06 20:55:17,500 - fastapi - INFO - Обнаружен объект wind/sup-board с координатами (469, 345, 592, 414), уверенность - 0.82
+2025-03-06 20:55:17,503 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.7544])
+data: tensor([[1.3978e+03, 4.8271e+02, 1.4273e+03, 5.1489e+02, 7.5438e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1412.5469,  498.7983,   29.4976,   32.1833]])
+xywhn: tensor([[0.7357, 0.4619, 0.0154, 0.0298]])
+xyxy: tensor([[1397.7981,  482.7067, 1427.2957,  514.8900]])
+xyxyn: tensor([[0.7280, 0.4470, 0.7434, 0.4768]])
+2025-03-06 20:55:17,513 - fastapi - INFO - Обнаружен объект human с координатами (1397, 482, 1427, 514), уверенность - 0.75
+2025-03-06 20:55:17,515 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.7536])
+data: tensor([[1.0227e+03, 6.8336e+02, 1.0589e+03, 7.1460e+02, 7.5357e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1040.7798,  698.9808,   36.2487,   31.2360]])
+xywhn: tensor([[0.5421, 0.6472, 0.0189, 0.0289]])
+xyxy: tensor([[1022.6554,  683.3628, 1058.9041,  714.5988]])
+xyxyn: tensor([[0.5326, 0.6327, 0.5515, 0.6617]])
+2025-03-06 20:55:17,526 - fastapi - INFO - Обнаружен объект human с координатами (1022, 683, 1058, 714), уверенность - 0.75
+2025-03-06 20:55:17,529 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.7504])
+data: tensor([[9.9428e+02, 3.0673e+02, 1.0296e+03, 3.4456e+02, 7.5039e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1011.9559,  325.6443,   35.3596,   37.8267]])
+xywhn: tensor([[0.5271, 0.3015, 0.0184, 0.0350]])
+xyxy: tensor([[ 994.2761,  306.7310, 1029.6357,  344.5576]])
+xyxyn: tensor([[0.5179, 0.2840, 0.5363, 0.3190]])
+2025-03-06 20:55:17,541 - fastapi - INFO - Обнаружен объект human с координатами (994, 306, 1029, 344), уверенность - 0.75
+2025-03-06 20:55:17,545 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.7433])
+data: tensor([[1.2152e+03, 8.0049e+02, 1.2532e+03, 8.4150e+02, 7.4326e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1234.2131,  820.9962,   38.0460,   41.0142]])
+xywhn: tensor([[0.6428, 0.7602, 0.0198, 0.0380]])
+xyxy: tensor([[1215.1902,  800.4891, 1253.2362,  841.5033]])
+xyxyn: tensor([[0.6329, 0.7412, 0.6527, 0.7792]])
+2025-03-06 20:55:17,556 - fastapi - INFO - Обнаружен объект human с координатами (1215, 800, 1253, 841), уверенность - 0.74
+2025-03-06 20:55:17,559 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.7354])
+data: tensor([[633.7727, 293.1099, 667.1001, 331.1955,   0.7354,   0.0000]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[650.4364, 312.1527,  33.3274,  38.0857]])
+xywhn: tensor([[0.3388, 0.2890, 0.0174, 0.0353]])
+xyxy: tensor([[633.7727, 293.1099, 667.1001, 331.1955]])
+xyxyn: tensor([[0.3301, 0.2714, 0.3474, 0.3067]])
+2025-03-06 20:55:17,570 - fastapi - INFO - Обнаружен объект human с координатами (633, 293, 667, 331), уверенность - 0.74
+2025-03-06 20:55:17,572 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.7202])
+data: tensor([[1.2564e+03, 6.4418e+02, 1.2905e+03, 6.8370e+02, 7.2019e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1273.4368,  663.9386,   34.0869,   39.5222]])
+xywhn: tensor([[0.6632, 0.6148, 0.0178, 0.0366]])
+xyxy: tensor([[1256.3933,  644.1775, 1290.4802,  683.6997]])
+xyxyn: tensor([[0.6544, 0.5965, 0.6721, 0.6331]])
+2025-03-06 20:55:17,583 - fastapi - INFO - Обнаружен объект human с координатами (1256, 644, 1290, 683), уверенность - 0.72
+2025-03-06 20:55:17,586 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.7202])
+data: tensor([[1.4534e+03, 4.9180e+02, 1.4825e+03, 5.2608e+02, 7.2019e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1467.9497,  508.9422,   29.0878,   34.2757]])
+xywhn: tensor([[0.7646, 0.4712, 0.0151, 0.0317]])
+xyxy: tensor([[1453.4059,  491.8044, 1482.4937,  526.0800]])
+xyxyn: tensor([[0.7570, 0.4554, 0.7721, 0.4871]])
+2025-03-06 20:55:17,597 - fastapi - INFO - Обнаружен объект human с координатами (1453, 491, 1482, 526), уверенность - 0.72
+2025-03-06 20:55:17,599 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.7146])
+data: tensor([[1.3170e+03, 5.2066e+02, 1.3516e+03, 5.5538e+02, 7.1456e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1334.3079,  538.0220,   34.6202,   34.7146]])
+xywhn: tensor([[0.6950, 0.4982, 0.0180, 0.0321]])
+xyxy: tensor([[1316.9978,  520.6647, 1351.6180,  555.3793]])
+xyxyn: tensor([[0.6859, 0.4821, 0.7040, 0.5142]])
+2025-03-06 20:55:17,610 - fastapi - INFO - Обнаружен объект human с координатами (1316, 520, 1351, 555), уверенность - 0.71
+2025-03-06 20:55:17,613 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.7130])
+data: tensor([[9.6229e+02, 6.2556e+02, 9.9074e+02, 6.5985e+02, 7.1296e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[976.5154, 642.7094,  28.4421,  34.2898]])
+xywhn: tensor([[0.5086, 0.5951, 0.0148, 0.0317]])
+xyxy: tensor([[962.2944, 625.5645, 990.7365, 659.8542]])
+xyxyn: tensor([[0.5012, 0.5792, 0.5160, 0.6110]])
+2025-03-06 20:55:17,623 - fastapi - INFO - Обнаружен объект human с координатами (962, 625, 990, 659), уверенность - 0.71
+2025-03-06 20:55:17,625 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.7066])
+data: tensor([[1.2221e+03, 5.6525e+02, 1.2505e+03, 6.0080e+02, 7.0663e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1236.2993,  583.0208,   28.4779,   35.5499]])
+xywhn: tensor([[0.6439, 0.5398, 0.0148, 0.0329]])
+xyxy: tensor([[1222.0603,  565.2458, 1250.5382,  600.7958]])
+xyxyn: tensor([[0.6365, 0.5234, 0.6513, 0.5563]])
+2025-03-06 20:55:17,636 - fastapi - INFO - Обнаружен объект human с координатами (1222, 565, 1250, 600), уверенность - 0.71
+2025-03-06 20:55:17,638 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.6844])
+data: tensor([[1.0259e+03, 3.6966e+02, 1.0663e+03, 4.0498e+02, 6.8444e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1046.0608,  387.3224,   40.3857,   35.3234]])
+xywhn: tensor([[0.5448, 0.3586, 0.0210, 0.0327]])
+xyxy: tensor([[1025.8679,  369.6606, 1066.2537,  404.9841]])
+xyxyn: tensor([[0.5343, 0.3423, 0.5553, 0.3750]])
+2025-03-06 20:55:17,648 - fastapi - INFO - Обнаружен объект human с координатами (1025, 369, 1066, 404), уверенность - 0.68
+2025-03-06 20:55:17,650 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.6822])
+data: tensor([[567.0262, 483.4497, 607.3878, 519.1381,   0.6822,   0.0000]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[587.2070, 501.2939,  40.3616,  35.6884]])
+xywhn: tensor([[0.3058, 0.4642, 0.0210, 0.0330]])
+xyxy: tensor([[567.0262, 483.4497, 607.3878, 519.1381]])
+xyxyn: tensor([[0.2953, 0.4476, 0.3163, 0.4807]])
+2025-03-06 20:55:17,660 - fastapi - INFO - Обнаружен объект human с координатами (567, 483, 607, 519), уверенность - 0.68
+2025-03-06 20:55:17,662 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.6769])
+data: tensor([[1.3608e+03, 4.4774e+02, 1.3926e+03, 4.7983e+02, 6.7687e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1376.7061,  463.7877,   31.7629,   32.0859]])
+xywhn: tensor([[0.7170, 0.4294, 0.0165, 0.0297]])
+xyxy: tensor([[1360.8246,  447.7447, 1392.5875,  479.8306]])
+xyxyn: tensor([[0.7088, 0.4146, 0.7253, 0.4443]])
+2025-03-06 20:55:17,673 - fastapi - INFO - Обнаружен объект human с координатами (1360, 447, 1392, 479), уверенность - 0.68
+2025-03-06 20:55:17,676 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.6694])
+data: tensor([[9.7032e+02, 5.4903e+02, 9.9884e+02, 5.7786e+02, 6.6943e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[984.5761, 563.4470,  28.5187,  28.8358]])
+xywhn: tensor([[0.5128, 0.5217, 0.0149, 0.0267]])
+xyxy: tensor([[970.3168, 549.0291, 998.8354, 577.8649]])
+xyxyn: tensor([[0.5054, 0.5084, 0.5202, 0.5351]])
+2025-03-06 20:55:17,690 - fastapi - INFO - Обнаружен объект human с координатами (970, 549, 998, 577), уверенность - 0.67
+2025-03-06 20:55:17,692 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.6679])
+data: tensor([[8.9287e+02, 7.3848e+01, 9.2352e+02, 1.1329e+02, 6.6788e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[908.1960,  93.5685,  30.6568,  39.4402]])
+xywhn: tensor([[0.4730, 0.0866, 0.0160, 0.0365]])
+xyxy: tensor([[892.8677,  73.8484, 923.5245, 113.2886]])
+xyxyn: tensor([[0.4650, 0.0684, 0.4810, 0.1049]])
+2025-03-06 20:55:17,703 - fastapi - INFO - Обнаружен объект human с координатами (892, 73, 923, 113), уверенность - 0.67
+2025-03-06 20:55:17,705 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.6442])
+data: tensor([[1.1816e+03, 5.5972e+02, 1.2046e+03, 5.8539e+02, 6.4418e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1193.0837,  572.5566,   23.0511,   25.6646]])
+xywhn: tensor([[0.6214, 0.5301, 0.0120, 0.0238]])
+xyxy: tensor([[1181.5581,  559.7244, 1204.6093,  585.3890]])
+xyxyn: tensor([[0.6154, 0.5183, 0.6274, 0.5420]])
+2025-03-06 20:55:17,715 - fastapi - INFO - Обнаружен объект human с координатами (1181, 559, 1204, 585), уверенность - 0.64
+2025-03-06 20:55:17,717 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.6434])
+data: tensor([[339.4635, 378.0872, 371.6303, 407.2149,   0.6434,   0.0000]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[355.5469, 392.6511,  32.1668,  29.1277]])
+xywhn: tensor([[0.1852, 0.3636, 0.0168, 0.0270]])
+xyxy: tensor([[339.4635, 378.0872, 371.6303, 407.2149]])
+xyxyn: tensor([[0.1768, 0.3501, 0.1936, 0.3771]])
+2025-03-06 20:55:17,727 - fastapi - INFO - Обнаружен объект human с координатами (339, 378, 371, 407), уверенность - 0.64
+2025-03-06 20:55:17,729 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.6288])
+data: tensor([[1.0742e+03, 4.5409e+02, 1.1012e+03, 4.7976e+02, 6.2883e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1087.6842,  466.9265,   26.9905,   25.6758]])
+xywhn: tensor([[0.5665, 0.4323, 0.0141, 0.0238]])
+xyxy: tensor([[1074.1890,  454.0887, 1101.1794,  479.7644]])
+xyxyn: tensor([[0.5595, 0.4205, 0.5735, 0.4442]])
+2025-03-06 20:55:17,737 - fastapi - INFO - Обнаружен объект human с координатами (1074, 454, 1101, 479), уверенность - 0.63
+2025-03-06 20:55:17,739 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.6102])
+data: tensor([[1.2259e+03, 6.1655e+02, 1.2523e+03, 6.5066e+02, 6.1023e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1239.0814,  633.6030,   26.4470,   34.1155]])
+xywhn: tensor([[0.6454, 0.5867, 0.0138, 0.0316]])
+xyxy: tensor([[1225.8579,  616.5452, 1252.3049,  650.6607]])
+xyxyn: tensor([[0.6385, 0.5709, 0.6522, 0.6025]])
+2025-03-06 20:55:17,748 - fastapi - INFO - Обнаружен объект human с координатами (1225, 616, 1252, 650), уверенность - 0.61
+2025-03-06 20:55:17,751 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.5974])
+data: tensor([[1.0756e+03, 5.8490e+02, 1.1140e+03, 6.2703e+02, 5.9741e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1094.7996,  605.9634,   38.3595,   42.1307]])
+xywhn: tensor([[0.5702, 0.5611, 0.0200, 0.0390]])
+xyxy: tensor([[1075.6198,  584.8981, 1113.9792,  627.0288]])
+xyxyn: tensor([[0.5602, 0.5416, 0.5802, 0.5806]])
+2025-03-06 20:55:17,761 - fastapi - INFO - Обнаружен объект human с координатами (1075, 584, 1113, 627), уверенность - 0.60
+2025-03-06 20:55:17,763 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.5935])
+data: tensor([[1.1032e+03, 5.0102e+02, 1.1285e+03, 5.2991e+02, 5.9346e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1115.8254,  515.4666,   25.2714,   28.8926]])
+xywhn: tensor([[0.5812, 0.4773, 0.0132, 0.0268]])
+xyxy: tensor([[1103.1897,  501.0203, 1128.4611,  529.9129]])
+xyxyn: tensor([[0.5746, 0.4639, 0.5877, 0.4907]])
+2025-03-06 20:55:17,775 - fastapi - INFO - Обнаружен объект human с координатами (1103, 501, 1128, 529), уверенность - 0.59
+2025-03-06 20:55:17,777 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.5918])
+data: tensor([[1.1615e+03, 5.5094e+02, 1.1821e+03, 5.7468e+02, 5.9175e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1171.7764,  562.8131,   20.5551,   23.7400]])
+xywhn: tensor([[0.6103, 0.5211, 0.0107, 0.0220]])
+xyxy: tensor([[1161.4988,  550.9431, 1182.0538,  574.6831]])
+xyxyn: tensor([[0.6049, 0.5101, 0.6157, 0.5321]])
+2025-03-06 20:55:17,788 - fastapi - INFO - Обнаружен объект human с координатами (1161, 550, 1182, 574), уверенность - 0.59
+2025-03-06 20:55:17,790 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.5707])
+data: tensor([[9.9561e+02, 6.3105e+02, 1.0253e+03, 6.6279e+02, 5.7067e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1010.4608,  646.9177,   29.6979,   31.7454]])
+xywhn: tensor([[0.5263, 0.5990, 0.0155, 0.0294]])
+xyxy: tensor([[ 995.6118,  631.0450, 1025.3097,  662.7904]])
+xyxyn: tensor([[0.5185, 0.5843, 0.5340, 0.6137]])
+2025-03-06 20:55:17,799 - fastapi - INFO - Обнаружен объект human с координатами (995, 631, 1025, 662), уверенность - 0.57
+2025-03-06 20:55:17,801 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.5664])
+data: tensor([[1.0223e+03, 5.7196e+02, 1.0482e+03, 6.0166e+02, 5.6641e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1035.2626,  586.8078,   25.8412,   29.7030]])
+xywhn: tensor([[0.5392, 0.5433, 0.0135, 0.0275]])
+xyxy: tensor([[1022.3420,  571.9563, 1048.1832,  601.6593]])
+xyxyn: tensor([[0.5325, 0.5296, 0.5459, 0.5571]])
+2025-03-06 20:55:17,810 - fastapi - INFO - Обнаружен объект human с координатами (1022, 571, 1048, 601), уверенность - 0.57
+2025-03-06 20:55:17,812 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.5662])
+data: tensor([[1.1095e+03, 6.2086e+02, 1.1339e+03, 6.4554e+02, 5.6619e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1121.6812,  633.2000,   24.3834,   24.6771]])
+xywhn: tensor([[0.5842, 0.5863, 0.0127, 0.0228]])
+xyxy: tensor([[1109.4895,  620.8614, 1133.8729,  645.5385]])
+xyxyn: tensor([[0.5779, 0.5749, 0.5906, 0.5977]])
+2025-03-06 20:55:17,820 - fastapi - INFO - Обнаружен объект human с координатами (1109, 620, 1133, 645), уверенность - 0.57
+2025-03-06 20:55:17,822 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.5627])
+data: tensor([[447.3094, 340.8546, 478.2613, 369.8814,   0.5627,   0.0000]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[462.7853, 355.3680,  30.9520,  29.0268]])
+xywhn: tensor([[0.2410, 0.3290, 0.0161, 0.0269]])
+xyxy: tensor([[447.3094, 340.8546, 478.2613, 369.8814]])
+xyxyn: tensor([[0.2330, 0.3156, 0.2491, 0.3425]])
+2025-03-06 20:55:17,831 - fastapi - INFO - Обнаружен объект human с координатами (447, 340, 478, 369), уверенность - 0.56
+2025-03-06 20:55:17,833 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.5158])
+data: tensor([[9.8795e+02, 5.9963e+02, 1.0245e+03, 6.5807e+02, 5.1578e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1006.2343,  628.8509,   36.5746,   58.4326]])
+xywhn: tensor([[0.5241, 0.5823, 0.0190, 0.0541]])
+xyxy: tensor([[ 987.9470,  599.6346, 1024.5216,  658.0672]])
+xyxyn: tensor([[0.5146, 0.5552, 0.5336, 0.6093]])
+2025-03-06 20:55:17,844 - fastapi - INFO - Обнаружен объект human с координатами (987, 599, 1024, 658), уверенность - 0.52
+2025-03-06 20:55:17,846 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.4911])
+data: tensor([[1.0001e+03, 9.2219e+02, 1.0374e+03, 9.5931e+02, 4.9111e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1018.7607,  940.7495,   37.2835,   37.1237]])
+xywhn: tensor([[0.5306, 0.8711, 0.0194, 0.0344]])
+xyxy: tensor([[1000.1190,  922.1876, 1037.4025,  959.3113]])
+xyxyn: tensor([[0.5209, 0.8539, 0.5403, 0.8883]])
+2025-03-06 20:55:17,857 - fastapi - INFO - Обнаружен объект human с координатами (1000, 922, 1037, 959), уверенность - 0.49
+2025-03-06 20:55:17,859 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.4079])
+data: tensor([[1.1793e+03, 6.1595e+02, 1.2177e+03, 6.5555e+02, 4.0791e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1198.5056,  635.7499,   38.4869,   39.6068]])
+xywhn: tensor([[0.6242, 0.5887, 0.0200, 0.0367]])
+xyxy: tensor([[1179.2622,  615.9465, 1217.7491,  655.5533]])
+xyxyn: tensor([[0.6142, 0.5703, 0.6342, 0.6070]])
+2025-03-06 20:55:17,871 - fastapi - INFO - Обнаружен объект human с координатами (1179, 615, 1217, 655), уверенность - 0.41
+2025-03-06 20:55:17,874 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.3937])
+data: tensor([[8.5421e+02, 4.2728e+02, 8.8506e+02, 4.6037e+02, 3.9366e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[869.6314, 443.8251,  30.8503,  33.0941]])
+xywhn: tensor([[0.4529, 0.4109, 0.0161, 0.0306]])
+xyxy: tensor([[854.2062, 427.2781, 885.0566, 460.3722]])
+xyxyn: tensor([[0.4449, 0.3956, 0.4610, 0.4263]])
+2025-03-06 20:55:17,884 - fastapi - INFO - Обнаружен объект human с координатами (854, 427, 885, 460), уверенность - 0.39
+2025-03-06 20:55:17,886 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.3865])
+data: tensor([[1.1874e+03, 6.2693e+02, 1.2283e+03, 6.6872e+02, 3.8649e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1207.8450,  647.8235,   40.8846,   41.7880]])
+xywhn: tensor([[0.6291, 0.5998, 0.0213, 0.0387]])
+xyxy: tensor([[1187.4026,  626.9295, 1228.2872,  668.7175]])
+xyxyn: tensor([[0.6184, 0.5805, 0.6397, 0.6192]])
+2025-03-06 20:55:17,897 - fastapi - INFO - Обнаружен объект human с координатами (1187, 626, 1228, 668), уверенность - 0.39
+2025-03-06 20:55:17,900 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.3859])
+data: tensor([[1.1407e+03, 5.0210e+02, 1.1669e+03, 5.3198e+02, 3.8585e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1153.8038,  517.0408,   26.1670,   29.8759]])
+xywhn: tensor([[0.6009, 0.4787, 0.0136, 0.0277]])
+xyxy: tensor([[1140.7203,  502.1028, 1166.8873,  531.9787]])
+xyxyn: tensor([[0.5941, 0.4649, 0.6078, 0.4926]])
+2025-03-06 20:55:17,912 - fastapi - INFO - Обнаружен объект human с координатами (1140, 502, 1166, 531), уверенность - 0.39
+2025-03-06 20:55:17,914 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.3050])
+data: tensor([[9.7620e+02, 8.7517e+02, 1.0181e+03, 9.2344e+02, 3.0503e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[997.1389, 899.3080,  41.8715,  48.2692]])
+xywhn: tensor([[0.5193, 0.8327, 0.0218, 0.0447]])
+xyxy: tensor([[ 976.2032,  875.1735, 1018.0746,  923.4426]])
+xyxyn: tensor([[0.5084, 0.8103, 0.5302, 0.8550]])
+2025-03-06 20:55:17,925 - fastapi - INFO - Обнаружен объект human с координатами (976, 875, 1018, 923), уверенность - 0.31
+2025-03-06 20:55:17,927 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.2862])
+data: tensor([[5.1936e+02, 3.6039e+02, 5.6346e+02, 4.0061e+02, 2.8618e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[541.4132, 380.5020,  44.0980,  40.2173]])
+xywhn: tensor([[0.2820, 0.3523, 0.0230, 0.0372]])
+xyxy: tensor([[519.3642, 360.3933, 563.4622, 400.6106]])
+xyxyn: tensor([[0.2705, 0.3337, 0.2935, 0.3709]])
+2025-03-06 20:55:17,937 - fastapi - INFO - Обнаружен объект human с координатами (519, 360, 563, 400), уверенность - 0.29
+2025-03-06 20:55:17,939 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.2737])
+data: tensor([[9.7025e+02, 4.3699e+02, 9.9850e+02, 4.7072e+02, 2.7375e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[984.3759, 453.8566,  28.2506,  33.7324]])
+xywhn: tensor([[0.5127, 0.4202, 0.0147, 0.0312]])
+xyxy: tensor([[970.2506, 436.9904, 998.5012, 470.7228]])
+xyxyn: tensor([[0.5053, 0.4046, 0.5201, 0.4359]])
+2025-03-06 20:55:17,950 - fastapi - INFO - Обнаружен объект human с координатами (970, 436, 998, 470), уверенность - 0.27
+2025-03-06 20:55:17,953 - fastapi - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([0.])
+conf: tensor([0.2615])
+data: tensor([[1.1930e+03, 6.3396e+02, 1.2276e+03, 6.7076e+02, 2.6154e-01, 0.0000e+00]])
+id: None
+is_track: False
+orig_shape: (1080, 1920)
+shape: torch.Size([1, 6])
+xywh: tensor([[1210.3281,  652.3608,   34.5969,   36.7987]])
+xywhn: tensor([[0.6304, 0.6040, 0.0180, 0.0341]])
+xyxy: tensor([[1193.0297,  633.9615, 1227.6266,  670.7602]])
+xyxyn: tensor([[0.6214, 0.5870, 0.6394, 0.6211]])
+2025-03-06 20:55:17,963 - fastapi - INFO - Обнаружен объект human с координатами (1193, 633, 1227, 670), уверенность - 0.26
+2025-03-06 20:55:17,967 - uvicorn.access - INFO - 127.0.0.1:53771 - "POST /inference?path_to_detector=.%2Fsrc%2Fmodels%2Fdetectors%2Fyolo11m&detector_model_format=onnx&use_cude=true&confidence_thershold=0.25&nms_threshold=0.5 HTTP/1.1" 200
+2025-03-06 20:55:30,285 - uvicorn.access - INFO - ::1:54155 - "GET /health HTTP/1.1" 200
+2025-03-06 20:55:30,287 - fastapi - INFO - Сервис работает исправно
+2025-03-06 20:55:50,306 - uvicorn.access - INFO - ::1:54617 - "GET /health HTTP/1.1" 200
+2025-03-06 20:55:50,308 - fastapi - INFO - Сервис работает исправно

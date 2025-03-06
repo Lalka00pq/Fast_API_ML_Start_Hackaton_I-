@@ -10,7 +10,7 @@ import io
 import torch
 import onnxruntime as ort
 from torchvision import transforms
-from ultralytics import YOLO
+import ultralytics
 import os
 from src.datacontracts.inference_results import InferenceResult, DetectedAndClassifiedObject
 
@@ -65,7 +65,7 @@ async def inference(path_to_detector: str = service_config_python.detectors_para
                     image: UploadFile = File(...),
                     use_cude: bool = service_config_python.detectors_params.use_cuda,
                     confidence_thershold: float = service_config_python.detectors_params.confidence_thershold,
-                    nms_threshold: float = service_config_python.detectors_params.nms_threshold) -> DetectedAndClassifiedObject:
+                    nms_threshold: float = service_config_python.detectors_params.nms_threshold) -> DetectedAndClassifiedObject | None:
     """Метод для инференса изображения
 
     Args:
@@ -74,7 +74,7 @@ async def inference(path_to_detector: str = service_config_python.detectors_para
     Returns:
         InferenceResult: Результат инференса
     """
-    # Определение устройства для выполнения инференса
+    # Определение устройства (cuda или cpu) для выполнения инференса
     if torch.cuda.is_available() and use_cude:
         device = 'cuda'
     elif not torch.cuda.is_available() and use_cude:
@@ -84,43 +84,101 @@ async def inference(path_to_detector: str = service_config_python.detectors_para
         device = 'cpu'
     else:
         device = 'cpu'
-    # Загрузка параметров из конфига
-    path_to_detector = path_to_detector + '.' + detector_model_format
-
-    detector_model = YOLO(f'{path_to_detector}').to(device)
-
-    # Логирование детектора
-    logger.info(
-        f"Загружена модель - {service_config_python.detectors_params.detector_name} на устройстве {detector_model.device}"
-    )
+    detected_objects = []
     logger.info(
         f"Путь к модели - {path_to_detector}"
     )
-    image_for_detect = Image.open(io.BytesIO(image.file.read())).convert('RGB')
-    detect_results = detector_model.predict(
-        source=image_for_detect, conf=confidence_thershold, iou=nms_threshold)
-    detected_objects = []
-    for result in detect_results:
-        boxes = result.boxes
-        for box in boxes:
-            xyxy = box.xyxy[0].tolist()
-            xmin, ymin, xmax, ymax = xyxy
-            confidence = box.conf[0].item()
-            cls_obj = box.cls[0].item()
-            class_name = detector_model.names[int(cls_obj)]
+    # Загрузка параметров из конфига (onnx или pt)
+    path_to_detector = path_to_detector + '.' + detector_model_format
+    if detector_model_format == 'onnx':
+        try:
+            detector_model = ultralytics.YOLO(path_to_detector)
             logger.info(
-                f"Обнаружен объект {class_name} с координатами {int(xyxy[0]), int(xyxy[1]), int(xyxy[2]), int(xyxy[3])}, {confidence:.2f}%"
+                f"Загружена модель - {service_config_python.detectors_params.detector_name}"
             )
-            detected_objects.append(InferenceResult(
-                class_name=class_name,
-                x=int(xmin + (xmax - xmin) / 2),
-                y=int(ymin + (ymax - ymin) / 2),
-                width=int(xmax - xmin),
-                height=int(ymax - ymin),
-            ))
-    if len(detected_objects) == 0:
-        logger.info(
-            "Объекты на изображении не обнаружены"
-        )
-        return DetectedAndClassifiedObject(object_bbox=None)
-    return DetectedAndClassifiedObject(object_bbox=detected_objects)
+        except Exception as e:
+            logger.error(
+                f"Ошибка при загрузке модели детектора: {e}"
+            )
+            return None
+        try:
+            image_for_detect = Image.open(
+                io.BytesIO(image.file.read())).convert('RGB')
+            result = detector_model(image_for_detect)
+            logger.info(result)
+        except Exception as e:
+            logger.error(
+                f"Ошибка при загрузке изображения: {e}"
+            )
+            return None
+        for r in result:
+            boxes = r.boxes
+            for box in boxes:
+                class_id = box.cls.item()
+                xmin, ymin, xmax, ymax = box.xyxy[0].tolist()
+                confidence = box.conf.item()
+                class_name = detector_model.names[int(class_id)]
+                logger.info(
+                    f"Обнаружен объект {class_name} с координатами {int(xmin), int(ymin), int(xmax), int(ymax)}, уверенность - {confidence:.2f}"
+                )
+                detected_objects.append(InferenceResult(
+                    class_name=class_name,
+                    x=int(xmin + (xmax - xmin) / 2),
+                    y=int(ymin + (ymax - ymin) / 2),
+                    width=int(xmax - xmin),
+                    height=int(ymax - ymin),
+                ))
+        if len(detected_objects) == 0:
+            logger.info(
+                "Объекты на изображении не обнаружены"
+            )
+            return DetectedAndClassifiedObject(object_bbox=None)
+        return DetectedAndClassifiedObject(object_bbox=detected_objects)
+
+    # Если модель в формате pt
+    else:
+        try:
+            detector_model = ultralytics.YOLO(path_to_detector).to(device)
+            logger.info(
+                f"Загружена модель - {service_config_python.detectors_params.detector_name}"
+            )
+        except Exception as e:
+            logger.error(
+                f"Ошибка при загрузке модели детектора: {e}"
+            )
+            return None
+        try:
+            image_for_detect = Image.open(
+                io.BytesIO(image.file.read())).convert('RGB')
+        except Exception as e:
+            logger.error(
+                f"Ошибка при загрузке изображения: {e}"
+            )
+            return None
+
+        detect_results = detector_model.predict(
+            source=image_for_detect, conf=confidence_thershold, iou=nms_threshold)
+        for result in detect_results:
+            boxes = result.boxes
+            for box in boxes:
+                xyxy = box.xyxy[0].tolist()
+                xmin, ymin, xmax, ymax = xyxy
+                confidence = box.conf[0].item()
+                cls_obj = box.cls[0].item()
+                class_name = detector_model.names[int(cls_obj)]
+                logger.info(
+                    f"Обнаружен объект {class_name} с координатами {int(xyxy[0]), int(xyxy[1]), int(xyxy[2]), int(xyxy[3])}, уверенность - {confidence:.2f}"
+                )
+                detected_objects.append(InferenceResult(
+                    class_name=class_name,
+                    x=int(xmin + (xmax - xmin) / 2),
+                    y=int(ymin + (ymax - ymin) / 2),
+                    width=int(xmax - xmin),
+                    height=int(ymax - ymin),
+                ))
+        if len(detected_objects) == 0:
+            logger.info(
+                "Объекты на изображении не обнаружены"
+            )
+            return DetectedAndClassifiedObject(object_bbox=None)
+        return DetectedAndClassifiedObject(object_bbox=detected_objects)

@@ -2,7 +2,7 @@
 	"detector_params": {
 		"detector_name": "YOLO11",
 		"detector_model_format": "pt",
-		"detector_model_path": "./src/models/detectors/yolo11s",
+		"detector_model_path": "./src/models/detectors/yolo11m",
 		"confidence_thershold": 0.25,
 		"nms_threshold": 0.5,
 		"use_cuda": true

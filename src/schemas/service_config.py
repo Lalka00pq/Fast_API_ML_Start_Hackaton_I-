@@ -25,7 +25,7 @@ class DetectorParams(BaseModel):
     """Датакласс, описывающий параметры детектора"""
     detector_name: str = Field(default="YOLO11")
     detector_model_format: str = Field(default="pt")
-    detector_model_path: str = Field(default="./src/models/detectors/yolo11s")
+    detector_model_path: str = Field(default="./src/models/detectors/yolo11m")
     confidence_thershold: float = Field(default=0.25)
     nms_threshold: float = Field(default=0.5)
     use_cuda: bool = Field(default=True)
