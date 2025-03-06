@@ -1,31 +1,30 @@
-2025-03-06 16:27:47,389 - fastapi - INFO - Конфигурация сервиса: .\src\configs\service_config.json
-2025-03-06 16:27:47,418 - uvicorn.error - INFO - Started server process [27836]
-2025-03-06 16:27:47,418 - uvicorn.error - INFO - Waiting for application startup.
-2025-03-06 16:27:47,423 - uvicorn.error - INFO - Application startup complete.
-2025-03-06 16:27:47,429 - uvicorn.error - INFO - Uvicorn running on http://localhost:8000 (Press CTRL+C to quit)
-2025-03-06 16:27:49,192 - uvicorn.access - INFO - 127.0.0.1:58273 - "GET /docs HTTP/1.1" 200
-2025-03-06 16:27:49,424 - uvicorn.access - INFO - 127.0.0.1:58273 - "GET /openapi.json HTTP/1.1" 200
-2025-03-06 16:27:56,887 - uvicorn.access - INFO - ::1:58455 - "GET /health HTTP/1.1" 200
-2025-03-06 16:28:03,888 - fastapi - INFO - CUDA не доступна на устройстве. Используется CPU для выполнения инференса
-2025-03-06 16:28:03,890 - fastapi - INFO - Используется cpu для выполнения инференса
-2025-03-06 16:28:03,970 - fastapi - INFO - Загружен детектор - YOLO11 на устройстве cpu
-2025-03-06 16:28:04,490 - fastapi - INFO - Загружен классификатор - RESNET18
-2025-03-06 16:28:04,494 - fastapi - INFO - Обнаружен объект с координатами (446, 340, 592, 413)
-2025-03-06 16:28:04,521 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 66%
-2025-03-06 16:28:04,526 - fastapi - INFO - Обнаружен объект с координатами (566, 549, 692, 609)
-2025-03-06 16:28:04,549 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 45%
-2025-03-06 16:28:04,553 - fastapi - INFO - Обнаружен объект с координатами (898, 78, 916, 105)
-2025-03-06 16:28:04,584 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 41%
-2025-03-06 16:28:04,588 - fastapi - INFO - Обнаружен объект с координатами (968, 860, 1046, 984)
-2025-03-06 16:28:04,610 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 35%
-2025-03-06 16:28:04,614 - fastapi - INFO - Обнаружен объект с координатами (971, 430, 1003, 469)
-2025-03-06 16:28:04,637 - fastapi - INFO - Объект классифицирован как human с вероятностью 33%
-2025-03-06 16:28:04,642 - fastapi - INFO - Обнаружен объект с координатами (557, 550, 690, 610)
-2025-03-06 16:28:04,665 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 26%
-2025-03-06 16:28:04,675 - uvicorn.access - INFO - 127.0.0.1:58615 - "POST /inference?path_to_detector=.%2Fsrc%2Fmodels%2Fdetectors%2Fyolo11m&path_to_classifier=.%2Fsrc%2Fmodels%2Fclassifiers%2Fresnet18&detector_model_format=pt&classifier_model_format=onnx&use_cude=true&confidence_thershold=0.25&nms_threshold=0.5 HTTP/1.1" 200
-2025-03-06 16:28:16,906 - uvicorn.access - INFO - ::1:58913 - "GET /health HTTP/1.1" 200
-2025-03-06 16:28:36,918 - uvicorn.access - INFO - ::1:59384 - "GET /health HTTP/1.1" 200
-2025-03-06 16:28:55,243 - uvicorn.error - INFO - Shutting down
-2025-03-06 16:28:55,347 - uvicorn.error - INFO - Waiting for application shutdown.
-2025-03-06 16:28:55,349 - uvicorn.error - INFO - Application shutdown complete.
-2025-03-06 16:28:55,351 - uvicorn.error - INFO - Finished server process [27836]
+2025-03-06 16:48:00,590 - fastapi - INFO - Конфигурация сервиса: .\src\configs\service_config.json
+2025-03-06 16:48:00,606 - uvicorn.error - INFO - Started server process [18248]
+2025-03-06 16:48:00,606 - uvicorn.error - INFO - Waiting for application startup.
+2025-03-06 16:48:00,606 - uvicorn.error - INFO - Application startup complete.
+2025-03-06 16:48:00,625 - uvicorn.error - INFO - Uvicorn running on http://localhost:8000 (Press CTRL+C to quit)
+2025-03-06 16:48:08,458 - fastapi - INFO - Мониторинг сервиса запущен
+2025-03-06 16:48:10,484 - uvicorn.access - INFO - ::1:54246 - "GET /health HTTP/1.1" 200
+2025-03-06 16:48:10,486 - fastapi - INFO - Сервис работает исправно
+2025-03-06 16:48:30,497 - uvicorn.access - INFO - ::1:54695 - "GET /health HTTP/1.1" 200
+2025-03-06 16:48:30,499 - fastapi - INFO - Сервис работает исправно
+2025-03-06 16:48:50,515 - uvicorn.access - INFO - ::1:55149 - "GET /health HTTP/1.1" 200
+2025-03-06 16:48:50,515 - fastapi - INFO - Сервис работает исправно
+2025-03-06 16:49:10,529 - uvicorn.access - INFO - ::1:55598 - "GET /health HTTP/1.1" 200
+2025-03-06 16:49:10,530 - fastapi - INFO - Сервис работает исправно
+2025-03-06 16:49:30,559 - uvicorn.access - INFO - ::1:56049 - "GET /health HTTP/1.1" 200
+2025-03-06 16:49:30,559 - fastapi - INFO - Сервис работает исправно
+2025-03-06 16:49:50,563 - uvicorn.access - INFO - ::1:56499 - "GET /health HTTP/1.1" 200
+2025-03-06 16:49:50,563 - fastapi - INFO - Сервис работает исправно
+2025-03-06 16:50:10,574 - uvicorn.access - INFO - ::1:56946 - "GET /health HTTP/1.1" 200
+2025-03-06 16:50:10,577 - fastapi - INFO - Сервис работает исправно
+2025-03-06 16:50:30,594 - uvicorn.access - INFO - ::1:57396 - "GET /health HTTP/1.1" 200
+2025-03-06 16:50:30,596 - fastapi - INFO - Сервис работает исправно
+2025-03-06 16:50:50,615 - uvicorn.access - INFO - ::1:57852 - "GET /health HTTP/1.1" 200
+2025-03-06 16:50:50,616 - fastapi - INFO - Сервис работает исправно
+2025-03-06 16:51:10,626 - uvicorn.access - INFO - ::1:58297 - "GET /health HTTP/1.1" 200
+2025-03-06 16:51:10,626 - fastapi - INFO - Сервис работает исправно
+2025-03-06 16:51:26,527 - uvicorn.error - INFO - Shutting down
+2025-03-06 16:51:26,642 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-03-06 16:51:26,644 - uvicorn.error - INFO - Application shutdown complete.
+2025-03-06 16:51:26,646 - uvicorn.error - INFO - Finished server process [18248]

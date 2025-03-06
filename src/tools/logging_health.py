@@ -4,8 +4,9 @@ import aiohttp
 import logging
 import threading
 from typing import Optional
+from src.tools.logging_tools import get_logger
 
-logger = logging.getLogger(__name__)
+logger = get_logger()
 
 
 class HealthMonitor:
