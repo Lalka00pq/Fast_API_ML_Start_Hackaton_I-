@@ -60,8 +60,8 @@ def preprocess_image(image_path: str) -> np.ndarray:
     "/inference",
     summary="Выполняет инференс изображения."
 )
-async def inference(path_to_detector: str = service_config_python.detectors_params.detector_name,
-                    path_to_classifier: str = service_config_python.classifiers_params.classifier_name,
+async def inference(path_to_detector: str = service_config_python.detectors_params.detector_model_path,
+                    path_to_classifier: str = service_config_python.classifiers_params.classifier_model_path,
                     detector_model_format: str = service_config_python.detectors_params.detector_model_format,
                     classifier_model_format: str = service_config_python.classifiers_params.classifier_model_format,
                     image: UploadFile = File(...),
@@ -79,6 +79,11 @@ async def inference(path_to_detector: str = service_config_python.detectors_para
     # Определение устройства для выполнения инференса
     if torch.cuda.is_available() and use_cude:
         device = 'cuda'
+    elif not torch.cuda.is_available() and use_cude:
+        logger.info(
+            "CUDA не доступна на устройстве. Используется CPU для выполнения инференса"
+        )
+        device = 'cpu'
     else:
         device = 'cpu'
     logger.info(
@@ -86,16 +91,16 @@ async def inference(path_to_detector: str = service_config_python.detectors_para
     )
     # Загрузка параметров из конфига
     classes_name = service_config_python.classes_info.classes_name
-    path_to_detector = service_config_python.detectors_params.model_path + \
+    path_to_detector = service_config_python.detectors_params.detector_model_path + \
         '.' + detector_model_format
-    path_to_classifier = service_config_python.classifiers_params.model_path + \
+    path_to_classifier = service_config_python.classifiers_params.classifier_model_path + \
         '.' + classifier_model_format
     detector = YOLO(path_to_detector).to(device)
     detector.conf = confidence_thershold
     detector.iou = nms_threshold
     # Логирование детектора
     logger.info(
-        f"Загружен детектор - {service_config_python.detectors_params.detector_name} "
+        f"Загружен детектор - {service_config_python.detectors_params.detector_name} на устройстве {detector.device}"
     )
     image = Image.open(io.BytesIO(image.file.read())).convert('RGB')
     orig_img = np.array(image)
@@ -103,7 +108,7 @@ async def inference(path_to_detector: str = service_config_python.detectors_para
 
     # Добавить вариант того что модель не в формате onnx. Разобраться с gpu
     classifier = ort.InferenceSession(path_to_classifier,
-                                      providers=['CPUExecutionProvider', 'CUDAExecutionProvider'])
+                                      providers=['CPUExecutionProvider'])
     logger.info(
         f"Загружен классификатор - {service_config_python.classifiers_params.classifier_name}"
     )

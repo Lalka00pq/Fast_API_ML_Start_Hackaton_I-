@@ -1,41 +1,31 @@
-2025-03-06 15:37:06,748 - fastapi - INFO - Конфигурация сервиса: .\src\configs\service_config.json
-2025-03-06 15:37:06,761 - uvicorn.error - INFO - Started server process [16928]
-2025-03-06 15:37:06,761 - uvicorn.error - INFO - Waiting for application startup.
-2025-03-06 15:37:06,761 - uvicorn.error - INFO - Application startup complete.
-2025-03-06 15:37:06,771 - uvicorn.error - INFO - Uvicorn running on http://localhost:8000 (Press CTRL+C to quit)
-2025-03-06 15:37:09,483 - uvicorn.access - INFO - 127.0.0.1:52169 - "GET /docs HTTP/1.1" 200
-2025-03-06 15:37:09,750 - uvicorn.access - INFO - 127.0.0.1:52169 - "GET /openapi.json HTTP/1.1" 200
-2025-03-06 15:37:16,640 - uvicorn.access - INFO - ::1:52338 - "GET /health HTTP/1.1" 200
-2025-03-06 15:37:30,168 - fastapi - INFO - Используется cpu для выполнения инференса
-2025-03-06 15:37:30,243 - fastapi - INFO - Загружен детектор - YOLO11 
-2025-03-06 15:37:30,798 - fastapi - INFO - Загружен классификатор - RESNET18
-2025-03-06 15:37:30,801 - fastapi - INFO - Обнаружен объект с координатами (446, 340, 592, 413)
-2025-03-06 15:37:30,820 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 66%
-2025-03-06 15:37:30,825 - fastapi - INFO - Обнаружен объект с координатами (566, 549, 692, 609)
-2025-03-06 15:37:30,847 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 45%
-2025-03-06 15:37:30,850 - fastapi - INFO - Обнаружен объект с координатами (898, 78, 916, 105)
-2025-03-06 15:37:30,876 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 41%
-2025-03-06 15:37:30,879 - fastapi - INFO - Обнаружен объект с координатами (968, 860, 1046, 984)
-2025-03-06 15:37:30,905 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 35%
-2025-03-06 15:37:30,909 - fastapi - INFO - Обнаружен объект с координатами (971, 430, 1003, 469)
-2025-03-06 15:37:30,930 - fastapi - INFO - Объект классифицирован как human с вероятностью 33%
-2025-03-06 15:37:30,934 - fastapi - INFO - Обнаружен объект с координатами (557, 550, 690, 610)
-2025-03-06 15:37:30,955 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 26%
-2025-03-06 15:37:30,966 - uvicorn.access - INFO - 127.0.0.1:52642 - "POST /inference?path_to_detector=YOLO11&path_to_classifier=RESNET18&detector_model_format=pt&classifier_model_format=onnx&use_cude=true&confidence_thershold=0.4&nms_threshold=0.5 HTTP/1.1" 200
-2025-03-06 15:37:36,653 - uvicorn.access - INFO - ::1:52792 - "GET /health HTTP/1.1" 200
-2025-03-06 15:37:56,670 - uvicorn.access - INFO - ::1:53247 - "GET /health HTTP/1.1" 200
-2025-03-06 15:38:16,688 - uvicorn.access - INFO - ::1:53709 - "GET /health HTTP/1.1" 200
-2025-03-06 15:38:36,704 - uvicorn.access - INFO - ::1:54165 - "GET /health HTTP/1.1" 200
-2025-03-06 15:38:56,719 - uvicorn.access - INFO - ::1:54657 - "GET /health HTTP/1.1" 200
-2025-03-06 15:39:16,728 - uvicorn.access - INFO - ::1:55122 - "GET /health HTTP/1.1" 200
-2025-03-06 15:39:36,743 - uvicorn.access - INFO - ::1:55573 - "GET /health HTTP/1.1" 200
-2025-03-06 15:39:56,750 - uvicorn.access - INFO - ::1:56043 - "GET /health HTTP/1.1" 200
-2025-03-06 15:40:16,777 - uvicorn.access - INFO - ::1:56493 - "GET /health HTTP/1.1" 200
-2025-03-06 15:40:36,787 - uvicorn.access - INFO - ::1:56967 - "GET /health HTTP/1.1" 200
-2025-03-06 15:40:56,805 - uvicorn.access - INFO - ::1:57419 - "GET /health HTTP/1.1" 200
-2025-03-06 15:41:16,817 - uvicorn.access - INFO - ::1:57877 - "GET /health HTTP/1.1" 200
-2025-03-06 15:41:36,825 - uvicorn.access - INFO - ::1:58328 - "GET /health HTTP/1.1" 200
-2025-03-06 15:41:49,589 - uvicorn.error - INFO - Shutting down
-2025-03-06 15:41:49,697 - uvicorn.error - INFO - Waiting for application shutdown.
-2025-03-06 15:41:49,699 - uvicorn.error - INFO - Application shutdown complete.
-2025-03-06 15:41:49,700 - uvicorn.error - INFO - Finished server process [16928]
+2025-03-06 16:27:47,389 - fastapi - INFO - Конфигурация сервиса: .\src\configs\service_config.json
+2025-03-06 16:27:47,418 - uvicorn.error - INFO - Started server process [27836]
+2025-03-06 16:27:47,418 - uvicorn.error - INFO - Waiting for application startup.
+2025-03-06 16:27:47,423 - uvicorn.error - INFO - Application startup complete.
+2025-03-06 16:27:47,429 - uvicorn.error - INFO - Uvicorn running on http://localhost:8000 (Press CTRL+C to quit)
+2025-03-06 16:27:49,192 - uvicorn.access - INFO - 127.0.0.1:58273 - "GET /docs HTTP/1.1" 200
+2025-03-06 16:27:49,424 - uvicorn.access - INFO - 127.0.0.1:58273 - "GET /openapi.json HTTP/1.1" 200
+2025-03-06 16:27:56,887 - uvicorn.access - INFO - ::1:58455 - "GET /health HTTP/1.1" 200
+2025-03-06 16:28:03,888 - fastapi - INFO - CUDA не доступна на устройстве. Используется CPU для выполнения инференса
+2025-03-06 16:28:03,890 - fastapi - INFO - Используется cpu для выполнения инференса
+2025-03-06 16:28:03,970 - fastapi - INFO - Загружен детектор - YOLO11 на устройстве cpu
+2025-03-06 16:28:04,490 - fastapi - INFO - Загружен классификатор - RESNET18
+2025-03-06 16:28:04,494 - fastapi - INFO - Обнаружен объект с координатами (446, 340, 592, 413)
+2025-03-06 16:28:04,521 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 66%
+2025-03-06 16:28:04,526 - fastapi - INFO - Обнаружен объект с координатами (566, 549, 692, 609)
+2025-03-06 16:28:04,549 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 45%
+2025-03-06 16:28:04,553 - fastapi - INFO - Обнаружен объект с координатами (898, 78, 916, 105)
+2025-03-06 16:28:04,584 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 41%
+2025-03-06 16:28:04,588 - fastapi - INFO - Обнаружен объект с координатами (968, 860, 1046, 984)
+2025-03-06 16:28:04,610 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 35%
+2025-03-06 16:28:04,614 - fastapi - INFO - Обнаружен объект с координатами (971, 430, 1003, 469)
+2025-03-06 16:28:04,637 - fastapi - INFO - Объект классифицирован как human с вероятностью 33%
+2025-03-06 16:28:04,642 - fastapi - INFO - Обнаружен объект с координатами (557, 550, 690, 610)
+2025-03-06 16:28:04,665 - fastapi - INFO - Объект классифицирован как wind/sup-board с вероятностью 26%
+2025-03-06 16:28:04,675 - uvicorn.access - INFO - 127.0.0.1:58615 - "POST /inference?path_to_detector=.%2Fsrc%2Fmodels%2Fdetectors%2Fyolo11m&path_to_classifier=.%2Fsrc%2Fmodels%2Fclassifiers%2Fresnet18&detector_model_format=pt&classifier_model_format=onnx&use_cude=true&confidence_thershold=0.25&nms_threshold=0.5 HTTP/1.1" 200
+2025-03-06 16:28:16,906 - uvicorn.access - INFO - ::1:58913 - "GET /health HTTP/1.1" 200
+2025-03-06 16:28:36,918 - uvicorn.access - INFO - ::1:59384 - "GET /health HTTP/1.1" 200
+2025-03-06 16:28:55,243 - uvicorn.error - INFO - Shutting down
+2025-03-06 16:28:55,347 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-03-06 16:28:55,349 - uvicorn.error - INFO - Application shutdown complete.
+2025-03-06 16:28:55,351 - uvicorn.error - INFO - Finished server process [27836]
