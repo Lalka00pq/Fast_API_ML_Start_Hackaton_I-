@@ -61,9 +61,7 @@ def preprocess_image(image_path: str) -> np.ndarray:
     summary="Выполняет инференс изображения."
 )
 async def inference(path_to_detector: str = service_config_python.detectors_params.detector_model_path,
-                    path_to_classifier: str = service_config_python.classifiers_params.classifier_model_path,
                     detector_model_format: str = service_config_python.detectors_params.detector_model_format,
-                    classifier_model_format: str = service_config_python.classifiers_params.classifier_model_format,
                     image: UploadFile = File(...),
                     use_cude: bool = service_config_python.detectors_params.use_cuda,
                     confidence_thershold: float = service_config_python.detectors_params.confidence_thershold,
@@ -86,65 +84,40 @@ async def inference(path_to_detector: str = service_config_python.detectors_para
         device = 'cpu'
     else:
         device = 'cpu'
-    logger.info(
-        f"Используется {device} для выполнения инференса"
-    )
     # Загрузка параметров из конфига
-    classes_name = service_config_python.classes_info.classes_name
-    path_to_detector = service_config_python.detectors_params.detector_model_path + \
-        '.' + detector_model_format
-    path_to_classifier = service_config_python.classifiers_params.classifier_model_path + \
-        '.' + classifier_model_format
-    detector = YOLO(path_to_detector).to(device)
-    detector.conf = confidence_thershold
-    detector.iou = nms_threshold
+    path_to_detector = path_to_detector + '.' + detector_model_format
+
+    detector_model = YOLO(f'{path_to_detector}').to(device)
+
     # Логирование детектора
     logger.info(
-        f"Загружен детектор - {service_config_python.detectors_params.detector_name} на устройстве {detector.device}"
+        f"Загружена модель - {service_config_python.detectors_params.detector_name} на устройстве {detector_model.device}"
     )
-    image = Image.open(io.BytesIO(image.file.read())).convert('RGB')
-    orig_img = np.array(image)
-    detect_result = detector(image)
-
-    # Добавить вариант того что модель не в формате onnx. Разобраться с gpu
-    classifier = ort.InferenceSession(path_to_classifier,
-                                      providers=['CPUExecutionProvider'])
     logger.info(
-        f"Загружен классификатор - {service_config_python.classifiers_params.classifier_name}"
+        f"Путь к модели - {path_to_detector}"
     )
+    image_for_detect = Image.open(io.BytesIO(image.file.read())).convert('RGB')
+    detect_results = detector_model.predict(
+        source=image_for_detect, conf=confidence_thershold, iou=nms_threshold)
     detected_objects = []
-    for box in detect_result[0].boxes:
-
-        xmin, ymin, xmax, ymax = box.xyxy[0].tolist()
-
-        confidence = box.conf.item()
-        # if confidence < service_config_python.detectors_params.confidence_thershold:
-        #     continue
-        cropped_object = orig_img[int(ymin):int(ymax), int(xmin):int(xmax)]
-        cropped_image = Image.fromarray(cropped_object)
-        cropped_image.save('src/cropped_image.jpg')
-        logger.info(
-            f"Обнаружен объект с координатами {int(xmin), int(ymin), int(xmax), int(ymax)}"
-        )
-        input_data = preprocess_image('src/cropped_image.jpg')
-        if os.path.exists('src/cropped_image.jpg'):
-            os.remove('src/cropped_image.jpg')
-        ort_inputs = classifier.get_inputs()[0].name
-        ort_outs = classifier.get_outputs()[0].name
-        outputs = classifier.run([ort_outs], {ort_inputs: input_data})
-
-        class_id = np.argmax(outputs[0])
-
-        label = classes_name[class_id.item()]
-        logger.info(
-            f"Объект классифицирован как {label} с вероятностью {round(confidence*100)}%")
-        detected_objects.append(InferenceResult(
-            class_name=label,
-            x=int(xmin + (xmax - xmin) / 2),
-            y=int(ymin + (ymax - ymin) / 2),
-            width=int(xmax - xmin),
-            height=int(ymax - ymin),
-        ))
+    for result in detect_results:
+        boxes = result.boxes
+        for box in boxes:
+            xyxy = box.xyxy[0].tolist()
+            xmin, ymin, xmax, ymax = xyxy
+            confidence = box.conf[0].item()
+            cls_obj = box.cls[0].item()
+            class_name = detector_model.names[int(cls_obj)]
+            logger.info(
+                f"Обнаружен объект {class_name} с координатами {int(xyxy[0]), int(xyxy[1]), int(xyxy[2]), int(xyxy[3])}, {confidence:.2f}%"
+            )
+            detected_objects.append(InferenceResult(
+                class_name=class_name,
+                x=int(xmin + (xmax - xmin) / 2),
+                y=int(ymin + (ymax - ymin) / 2),
+                width=int(xmax - xmin),
+                height=int(ymax - ymin),
+            ))
     if len(detected_objects) == 0:
         logger.info(
             "Объекты на изображении не обнаружены"

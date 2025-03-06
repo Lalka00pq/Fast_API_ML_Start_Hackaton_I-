@@ -1,30 +1,171 @@
-2025-03-06 16:48:00,590 - fastapi - INFO - Конфигурация сервиса: .\src\configs\service_config.json
-2025-03-06 16:48:00,606 - uvicorn.error - INFO - Started server process [18248]
-2025-03-06 16:48:00,606 - uvicorn.error - INFO - Waiting for application startup.
-2025-03-06 16:48:00,606 - uvicorn.error - INFO - Application startup complete.
-2025-03-06 16:48:00,625 - uvicorn.error - INFO - Uvicorn running on http://localhost:8000 (Press CTRL+C to quit)
-2025-03-06 16:48:08,458 - fastapi - INFO - Мониторинг сервиса запущен
-2025-03-06 16:48:10,484 - uvicorn.access - INFO - ::1:54246 - "GET /health HTTP/1.1" 200
-2025-03-06 16:48:10,486 - fastapi - INFO - Сервис работает исправно
-2025-03-06 16:48:30,497 - uvicorn.access - INFO - ::1:54695 - "GET /health HTTP/1.1" 200
-2025-03-06 16:48:30,499 - fastapi - INFO - Сервис работает исправно
-2025-03-06 16:48:50,515 - uvicorn.access - INFO - ::1:55149 - "GET /health HTTP/1.1" 200
-2025-03-06 16:48:50,515 - fastapi - INFO - Сервис работает исправно
-2025-03-06 16:49:10,529 - uvicorn.access - INFO - ::1:55598 - "GET /health HTTP/1.1" 200
-2025-03-06 16:49:10,530 - fastapi - INFO - Сервис работает исправно
-2025-03-06 16:49:30,559 - uvicorn.access - INFO - ::1:56049 - "GET /health HTTP/1.1" 200
-2025-03-06 16:49:30,559 - fastapi - INFO - Сервис работает исправно
-2025-03-06 16:49:50,563 - uvicorn.access - INFO - ::1:56499 - "GET /health HTTP/1.1" 200
-2025-03-06 16:49:50,563 - fastapi - INFO - Сервис работает исправно
-2025-03-06 16:50:10,574 - uvicorn.access - INFO - ::1:56946 - "GET /health HTTP/1.1" 200
-2025-03-06 16:50:10,577 - fastapi - INFO - Сервис работает исправно
-2025-03-06 16:50:30,594 - uvicorn.access - INFO - ::1:57396 - "GET /health HTTP/1.1" 200
-2025-03-06 16:50:30,596 - fastapi - INFO - Сервис работает исправно
-2025-03-06 16:50:50,615 - uvicorn.access - INFO - ::1:57852 - "GET /health HTTP/1.1" 200
-2025-03-06 16:50:50,616 - fastapi - INFO - Сервис работает исправно
-2025-03-06 16:51:10,626 - uvicorn.access - INFO - ::1:58297 - "GET /health HTTP/1.1" 200
-2025-03-06 16:51:10,626 - fastapi - INFO - Сервис работает исправно
-2025-03-06 16:51:26,527 - uvicorn.error - INFO - Shutting down
-2025-03-06 16:51:26,642 - uvicorn.error - INFO - Waiting for application shutdown.
-2025-03-06 16:51:26,644 - uvicorn.error - INFO - Application shutdown complete.
-2025-03-06 16:51:26,646 - uvicorn.error - INFO - Finished server process [18248]
+2025-03-06 19:06:25,185 - fastapi - INFO - Конфигурация сервиса: .\src\configs\service_config.json
+2025-03-06 19:06:25,214 - uvicorn.error - INFO - Started server process [28528]
+2025-03-06 19:06:25,214 - uvicorn.error - INFO - Waiting for application startup.
+2025-03-06 19:06:25,214 - uvicorn.error - INFO - Application startup complete.
+2025-03-06 19:06:25,230 - uvicorn.error - INFO - Uvicorn running on http://localhost:8000 (Press CTRL+C to quit)
+2025-03-06 19:06:27,721 - fastapi - INFO - CUDA не доступна на устройстве. Используется CPU для выполнения инференса
+2025-03-06 19:06:27,724 - fastapi - INFO - Используется cpu для выполнения инференса
+2025-03-06 19:06:27,739 - fastapi - INFO - Загружается детектор - ./src/models/detectors/yolo11n.pt
+2025-03-06 19:06:27,813 - fastapi - INFO - Загружен детектор - YOLO11 на устройстве cpu
+2025-03-06 19:06:28,072 - fastapi - INFO - Загружен классификатор - RESNET18
+2025-03-06 19:06:28,075 - fastapi - INFO - Обнаружен объект wind_sup-board с координатами (469, 343, 595, 416), 0.84%
+2025-03-06 19:06:28,079 - fastapi - INFO - Обнаружен объект human с координатами (1070, 576, 1137, 647), 0.80%
+2025-03-06 19:06:28,085 - fastapi - INFO - Обнаружен объект wind_sup-board с координатами (558, 549, 696, 617), 0.78%
+2025-03-06 19:06:28,087 - fastapi - INFO - Обнаружен объект human с координатами (991, 304, 1032, 349), 0.76%
+2025-03-06 19:06:28,091 - fastapi - INFO - Обнаружен объект human с координатами (1443, 487, 1487, 528), 0.75%
+2025-03-06 19:06:28,093 - fastapi - INFO - Обнаружен объект human с координатами (1310, 515, 1356, 557), 0.74%
+2025-03-06 19:06:28,096 - fastapi - INFO - Обнаружен объект wind_sup-board с координатами (972, 855, 1040, 983), 0.73%
+2025-03-06 19:06:28,100 - fastapi - INFO - Обнаружен объект human с координатами (1355, 444, 1394, 483), 0.71%
+2025-03-06 19:06:28,104 - fastapi - INFO - Обнаружен объект human с координатами (889, 73, 927, 115), 0.69%
+2025-03-06 19:06:28,107 - fastapi - INFO - Обнаружен объект human с координатами (326, 371, 378, 412), 0.68%
+2025-03-06 19:06:28,110 - fastapi - INFO - Обнаружен объект human с координатами (1019, 676, 1059, 714), 0.67%
+2025-03-06 19:06:28,113 - fastapi - INFO - Обнаружен объект human с координатами (1391, 478, 1432, 517), 0.66%
+2025-03-06 19:06:28,118 - fastapi - INFO - Обнаружен объект human с координатами (1216, 561, 1252, 599), 0.65%
+2025-03-06 19:06:28,122 - fastapi - INFO - Обнаружен объект human с координатами (1200, 784, 1259, 846), 0.64%
+2025-03-06 19:06:28,126 - fastapi - INFO - Обнаружен объект human с координатами (1206, 609, 1248, 657), 0.62%
+2025-03-06 19:06:28,128 - fastapi - INFO - Обнаружен объект human с координатами (1169, 543, 1208, 585), 0.62%
+2025-03-06 19:06:28,132 - fastapi - INFO - Обнаружен объект human с координатами (965, 541, 1004, 581), 0.61%
+2025-03-06 19:06:28,135 - fastapi - INFO - Обнаружен объект human с координатами (1071, 450, 1106, 485), 0.59%
+2025-03-06 19:06:28,138 - fastapi - INFO - Обнаружен объект human с координатами (1134, 496, 1170, 536), 0.59%
+2025-03-06 19:06:28,141 - fastapi - INFO - Обнаружен объект human с координатами (958, 620, 992, 661), 0.59%
+2025-03-06 19:06:28,143 - fastapi - INFO - Обнаружен объект human с координатами (1176, 609, 1231, 663), 0.58%
+2025-03-06 19:06:28,150 - fastapi - INFO - Обнаружен объект human с координатами (1098, 496, 1132, 532), 0.57%
+2025-03-06 19:06:28,153 - fastapi - INFO - Обнаружен объект human с координатами (849, 425, 885, 459), 0.56%
+2025-03-06 19:06:28,156 - fastapi - INFO - Обнаружен объект human с координатами (969, 430, 1006, 468), 0.56%
+2025-03-06 19:06:28,160 - fastapi - INFO - Обнаружен объект human с координатами (558, 481, 616, 524), 0.55%
+2025-03-06 19:06:28,163 - fastapi - INFO - Обнаружен объект human с координатами (1020, 363, 1071, 406), 0.54%
+2025-03-06 19:06:28,164 - fastapi - INFO - Обнаружен объект human с координатами (985, 596, 1027, 656), 0.53%
+2025-03-06 19:06:28,167 - fastapi - INFO - Обнаружен объект human с координатами (1254, 642, 1288, 682), 0.53%
+2025-03-06 19:06:28,171 - fastapi - INFO - Обнаружен объект human с координатами (445, 334, 489, 374), 0.52%
+2025-03-06 19:06:28,174 - fastapi - INFO - Обнаружен объект human с координатами (631, 290, 664, 330), 0.52%
+2025-03-06 19:06:28,177 - fastapi - INFO - Обнаружен объект human с координатами (566, 556, 606, 595), 0.51%
+2025-03-06 19:06:28,180 - fastapi - INFO - Обнаружен объект human с координатами (1017, 567, 1052, 606), 0.45%
+2025-03-06 19:06:28,183 - fastapi - INFO - Обнаружен объект human с координатами (647, 573, 685, 614), 0.41%
+2025-03-06 19:06:28,186 - fastapi - INFO - Обнаружен объект human с координатами (601, 561, 644, 604), 0.37%
+2025-03-06 19:06:28,189 - fastapi - INFO - Обнаружен объект human с координатами (1157, 541, 1196, 582), 0.36%
+2025-03-06 19:06:28,192 - fastapi - INFO - Обнаружен объект human с координатами (510, 360, 554, 403), 0.25%
+2025-03-06 19:06:28,198 - uvicorn.access - INFO - 127.0.0.1:60506 - "POST /inference?path_to_detector=.%2Fsrc%2Fmodels%2Fdetectors%2Fyolo11n&path_to_classifier=.%2Fsrc%2Fmodels%2Fclassifiers%2Fresnet18&detector_model_format=pt&classifier_model_format=onnx&use_cude=true&confidence_thershold=0.25&nms_threshold=0.5 HTTP/1.1" 200
+2025-03-06 19:06:32,401 - fastapi - INFO - Мониторинг сервиса запущен
+2025-03-06 19:06:34,420 - uvicorn.access - INFO - ::1:60659 - "GET /health HTTP/1.1" 200
+2025-03-06 19:06:34,424 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:06:54,432 - uvicorn.access - INFO - ::1:61130 - "GET /health HTTP/1.1" 200
+2025-03-06 19:06:54,435 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:07:14,447 - uvicorn.access - INFO - ::1:61589 - "GET /health HTTP/1.1" 200
+2025-03-06 19:07:14,450 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:07:34,471 - uvicorn.access - INFO - ::1:62049 - "GET /health HTTP/1.1" 200
+2025-03-06 19:07:34,474 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:07:54,494 - uvicorn.access - INFO - ::1:62514 - "GET /health HTTP/1.1" 200
+2025-03-06 19:07:54,496 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:08:14,512 - uvicorn.access - INFO - ::1:63012 - "GET /health HTTP/1.1" 200
+2025-03-06 19:08:14,515 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:08:34,525 - uvicorn.access - INFO - ::1:63495 - "GET /health HTTP/1.1" 200
+2025-03-06 19:08:34,528 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:08:54,538 - uvicorn.access - INFO - ::1:64016 - "GET /health HTTP/1.1" 200
+2025-03-06 19:08:54,538 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:09:14,562 - uvicorn.access - INFO - ::1:64485 - "GET /health HTTP/1.1" 200
+2025-03-06 19:09:14,564 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:09:34,578 - uvicorn.access - INFO - ::1:64948 - "GET /health HTTP/1.1" 200
+2025-03-06 19:09:34,581 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:09:54,586 - uvicorn.access - INFO - ::1:65399 - "GET /health HTTP/1.1" 200
+2025-03-06 19:09:54,588 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:10:14,599 - uvicorn.access - INFO - ::1:49740 - "GET /health HTTP/1.1" 200
+2025-03-06 19:10:14,601 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:10:34,611 - uvicorn.access - INFO - ::1:50259 - "GET /health HTTP/1.1" 200
+2025-03-06 19:10:34,614 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:10:54,630 - uvicorn.access - INFO - ::1:50721 - "GET /health HTTP/1.1" 200
+2025-03-06 19:10:54,633 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:11:14,646 - uvicorn.access - INFO - ::1:51200 - "GET /health HTTP/1.1" 200
+2025-03-06 19:11:14,650 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:11:34,660 - uvicorn.access - INFO - ::1:51655 - "GET /health HTTP/1.1" 200
+2025-03-06 19:11:34,663 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:11:42,592 - uvicorn.access - INFO - 127.0.0.1:51888 - "GET /docs HTTP/1.1" 200
+2025-03-06 19:11:42,883 - uvicorn.access - INFO - 127.0.0.1:51888 - "GET /openapi.json HTTP/1.1" 200
+2025-03-06 19:11:54,676 - uvicorn.access - INFO - ::1:52212 - "GET /health HTTP/1.1" 200
+2025-03-06 19:11:54,679 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:11:59,629 - fastapi - INFO - CUDA не доступна на устройстве. Используется CPU для выполнения инференса
+2025-03-06 19:11:59,631 - fastapi - INFO - Используется cpu для выполнения инференса
+2025-03-06 19:11:59,633 - fastapi - INFO - Загружается детектор - ./src/models/detectors/yolo11s.onnx
+2025-03-06 19:11:59,635 - uvicorn.access - INFO - 127.0.0.1:52325 - "POST /inference?path_to_detector=.%2Fsrc%2Fmodels%2Fdetectors%2Fyolo11s&detector_model_format=onnx&use_cude=true&confidence_thershold=0.25&nms_threshold=0.5 HTTP/1.1" 500
+2025-03-06 19:11:59,637 - uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\routing.py", line 758, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\routing.py", line 778, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\routing.py", line 299, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\routing.py", line 79, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\starlette\routing.py", line 74, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\src\routers\api_interface_image\router.py", line 95, in inference
+    )
+      
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1343, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\ultralytics\engine\model.py", line 885, in _apply
+    self._check_is_pytorch_model()
+  File "C:\Users\User\Desktop\fastAPI\Fast_API_ML_Start_Hackaton_I-\.venv\Lib\site-packages\ultralytics\engine\model.py", line 324, in _check_is_pytorch_model
+    raise TypeError(
+TypeError: model='./src/models/detectors/yolo11s.onnx' should be a *.pt PyTorch model to run this method, but is a different format. PyTorch models can train, val, predict and export, i.e. 'model.train(data=...)', but exported formats like ONNX, TensorRT etc. only support 'predict' and 'val' modes, i.e. 'yolo predict model=yolo11n.onnx'.
+To run CUDA or MPS inference please pass the device argument directly in your inference command, i.e. 'model.predict(source=..., device=0)'
+2025-03-06 19:12:14,694 - uvicorn.access - INFO - ::1:52672 - "GET /health HTTP/1.1" 200
+2025-03-06 19:12:14,696 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:12:34,709 - uvicorn.access - INFO - ::1:53136 - "GET /health HTTP/1.1" 200
+2025-03-06 19:12:34,712 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:12:54,731 - uvicorn.access - INFO - ::1:53604 - "GET /health HTTP/1.1" 200
+2025-03-06 19:12:54,734 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:13:14,750 - uvicorn.access - INFO - ::1:54077 - "GET /health HTTP/1.1" 200
+2025-03-06 19:13:14,752 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:13:34,757 - uvicorn.access - INFO - ::1:54544 - "GET /health HTTP/1.1" 200
+2025-03-06 19:13:34,761 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:13:54,775 - uvicorn.access - INFO - ::1:55021 - "GET /health HTTP/1.1" 200
+2025-03-06 19:13:54,778 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:14:14,812 - uvicorn.access - INFO - ::1:55484 - "GET /health HTTP/1.1" 200
+2025-03-06 19:14:14,813 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:14:34,826 - uvicorn.access - INFO - ::1:55952 - "GET /health HTTP/1.1" 200
+2025-03-06 19:14:34,829 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:14:54,836 - uvicorn.access - INFO - ::1:56406 - "GET /health HTTP/1.1" 200
+2025-03-06 19:14:54,838 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:15:14,856 - uvicorn.access - INFO - ::1:56857 - "GET /health HTTP/1.1" 200
+2025-03-06 19:15:14,859 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:15:34,879 - uvicorn.access - INFO - ::1:57308 - "GET /health HTTP/1.1" 200
+2025-03-06 19:15:34,882 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:15:54,902 - uvicorn.access - INFO - ::1:57772 - "GET /health HTTP/1.1" 200
+2025-03-06 19:15:54,902 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:16:14,918 - uvicorn.access - INFO - ::1:58221 - "GET /health HTTP/1.1" 200
+2025-03-06 19:16:14,921 - fastapi - INFO - Сервис работает исправно
+2025-03-06 19:16:34,935 - uvicorn.access - INFO - ::1:58673 - "GET /health HTTP/1.1" 200
+2025-03-06 19:16:34,938 - fastapi - INFO - Сервис работает исправно

@@ -1,7 +1,6 @@
 # python
 import asyncio
 import aiohttp
-import logging
 import threading
 from typing import Optional
 from src.tools.logging_tools import get_logger
