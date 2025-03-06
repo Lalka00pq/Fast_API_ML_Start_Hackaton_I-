@@ -44,17 +44,3 @@ class DetectedAndClassifiedObject(BaseModel):
     """ Датакласс данных которые будут возвращены сервисом (детекция и классификация) """
     object_bbox: List[InferenceResult] | None
     """ Координаты объекта """
-
-
-# class ServiceOutput(BaseModel):
-#     """Датаконтракт выхода сервиса"""
-#     class_name: str
-#     """Имя класса"""
-#     x: int
-#     """Координата x"""
-#     y: int
-#     """Координата y"""
-#     width: int = Field(default=640)
-#     """Ширина преобразованного изображения"""
-#     height: int = Field(default=480)
-#     """Высота преобразованного изображения"""
