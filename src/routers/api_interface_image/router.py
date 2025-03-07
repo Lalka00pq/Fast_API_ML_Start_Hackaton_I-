@@ -118,6 +118,8 @@ async def inference(path_to_detector: str = service_config_python.detectors_para
                 class_id = box.cls.item()
                 xmin, ymin, xmax, ymax = box.xyxy[0].tolist()
                 confidence = box.conf.item()
+                if confidence < confidence_thershold:
+                    continue
                 class_name = detector_model.names[int(class_id)]
                 logger.info(
                     f"Обнаружен объект {class_name} с координатами {int(xmin), int(ymin), int(xmax), int(ymax)}, уверенность - {confidence:.2f}"
