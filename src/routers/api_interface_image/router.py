@@ -58,12 +58,13 @@ def preprocess_image(image_path: str) -> np.ndarray:
     "/inference",
     summary="Выполняет инференс изображения."
 )
-async def inference(path_to_detector: str = service_config_python.detectors_params.detector_model_path,
-                    detector_model_format: str = service_config_python.detectors_params.detector_model_format,
-                    image: UploadFile = File(...),
-                    use_cude: bool = service_config_python.detectors_params.use_cuda,
-                    confidence_thershold: float = service_config_python.detectors_params.confidence_thershold,
-                    nms_threshold: float = service_config_python.detectors_params.nms_threshold) -> DetectedAndClassifiedObject | None:
+async def inference(
+        detector_name: str = service_config_python.detectors_params.detector_name,
+        detector_model_format: str = service_config_python.detectors_params.detector_model_format,
+        image: UploadFile = File(...),
+        use_cuda: bool = service_config_python.detectors_params.use_cuda,
+        confidence_thershold: float = service_config_python.detectors_params.confidence_thershold,
+        nms_threshold: float = service_config_python.detectors_params.nms_threshold) -> DetectedAndClassifiedObject | None:
     """Метод для инференса изображения
 
     Args:
@@ -73,9 +74,9 @@ async def inference(path_to_detector: str = service_config_python.detectors_para
         InferenceResult: Результат инференса
     """
     # Определение устройства (cuda или cpu) для выполнения инференса
-    if torch.cuda.is_available() and use_cude:
+    if torch.cuda.is_available() and use_cuda:
         device = 'cuda'
-    elif not torch.cuda.is_available() and use_cude:
+    elif not torch.cuda.is_available() and use_cuda:
         logger.info(
             "CUDA не доступна на устройстве. Используется CPU для выполнения инференса"
         )
@@ -86,11 +87,19 @@ async def inference(path_to_detector: str = service_config_python.detectors_para
         f"Устройство для выполнения инференса - {device}"
     )
     detected_objects = []
-    logger.info(
-        f"Путь к модели - {path_to_detector}"
-    )
     # Загрузка параметров из конфига (onnx или pt)
-    path_to_detector = path_to_detector + '.' + detector_model_format
+    try:
+        path_to_detector = './src/models/detectors/' + \
+            detector_name.lower() + '.' + detector_model_format
+        logger.info(
+            f"Путь к модели - {path_to_detector}"
+        )
+    except Exception as e:
+        logger.error(
+            f"Ошибка при загрузке модели детектора: {e}, Детектор {detector_name} отсутствует"
+        )
+        return None
+    # Если модель в формате onnx
     if detector_model_format == 'onnx':
         try:
             detector_model = ultralytics.YOLO(path_to_detector)

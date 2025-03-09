@@ -1,6 +1,6 @@
 {
 	"detector_params": {
-		"detector_name": "YOLO11",
+		"detector_name": "yolo11m",
 		"detector_model_format": "pt",
 		"detector_model_path": "./src/models/detectors/yolo11m",
 		"confidence_thershold": 0.25,
@@ -8,7 +8,7 @@
 		"use_cuda": true
 	},
 	"classifier_params": {
-		"classifier_name": "RESNET18",
+		"classifier_name": "resnet18",
 		"classifier_model_format": "onnx",
 		"classifier_model_path": "./src/models/classifiers/resnet18",
 		"use_cuda": true

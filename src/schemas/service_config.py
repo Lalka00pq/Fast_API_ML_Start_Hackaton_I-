@@ -23,7 +23,7 @@ class CommonParams(BaseModel):
 
 class DetectorParams(BaseModel):
     """Датакласс, описывающий параметры детектора"""
-    detector_name: str = Field(default="YOLO11")
+    detector_name: str = Field(default="yolo11m")
     detector_model_format: str = Field(default="pt")
     detector_model_path: str = Field(default="./src/models/detectors/yolo11m")
     confidence_thershold: float = Field(default=0.25)
@@ -39,7 +39,7 @@ class ClassesInfo(BaseModel):
 
 class ClassifierParams(BaseModel):
     """Датакласс, описывающий параметры классификатора"""
-    classifier_name: str = Field(default="RESNET18")
+    classifier_name: str = Field(default="resnet18")
     classifier_model_format: str = Field(default="onnx")
     classifier_model_path: str = Field(
         default="./src/models/classifiers/resnet18")
