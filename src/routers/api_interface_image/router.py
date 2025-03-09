@@ -15,8 +15,7 @@ import ultralytics
 # project
 from src.schemas.service_config import ServiceConfig
 from src.tools.logging_tools import get_logger
-from src.datacontracts.inference_results import InferenceResult, DetectedAndClassifiedObject
-
+from src.schemas.service_output import InferenceResult, DetectedAndClassifiedObject
 logger = get_logger()
 
 service_config = r".\src\configs\service_config.json"
