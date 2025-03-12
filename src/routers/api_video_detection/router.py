@@ -3,8 +3,7 @@ import json
 import shutil
 import os
 # 3rdparty
-from fastapi import APIRouter, UploadFile, File, HTTPException
-from fastapi.responses import StreamingResponse
+from fastapi import APIRouter, UploadFile, File
 from pydantic import TypeAdapter
 import cv2
 from ultralytics import YOLO
@@ -58,13 +57,13 @@ async def video_detection(video: UploadFile = File(...),
 
     try:
         path_to_model = './src/models/detectors/' + model.lower() + '.' + model_format
-        model = YOLO(path_to_model).to(device)
-        logger.info(f"Модель {model} загружена")
+        model = YOLO(path_to_model)
+        logger.info("Модель загружена")
     except FileNotFoundError:
         logger.error(f"Ошибка загрузки модели {model}, такой модели нет")
-        return StreamingResponse(status_code=500)
+        return None
     finally:
-        logger.info(f"Модель {model} загружена")
+        logger.info(f"Модель {model} загружена, формат {model_format}")
     video_path = f"temp_{video.filename}"
     with open(video_path, "wb") as buffer:
         shutil.copyfileobj(video.file, buffer)
@@ -72,8 +71,7 @@ async def video_detection(video: UploadFile = File(...),
     cap = cv2.VideoCapture(video_path)
     if not cap.isOpened():
         logger.error("Не удалось открыть видео")
-        raise HTTPException(status_code=400, detail="Не удалось открыть видео")
-
+        raise None
     results = []
 
     frame_id = 0
@@ -81,7 +79,7 @@ async def video_detection(video: UploadFile = File(...),
         ret, frame = cap.read()
         if not ret:
             break
-        detections = model(frame)
+        detections = model(frame, device=device)
         frame_results = []
 
         for row in detections:
@@ -109,6 +107,4 @@ async def video_detection(video: UploadFile = File(...),
     cap.release()
     os.remove(video_path)
     logger.info("Видео обработано")
-    if len(results) == 0:
-        return None
     return VideoDetection(objects=results)
