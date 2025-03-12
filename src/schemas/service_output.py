@@ -40,7 +40,21 @@ class InferenceResult(BaseModel):
     """Высота"""
 
 
+class FrameDetection(BaseModel):
+    """Модель для результата инференса кадра"""
+    frame: int
+    """Номер кадра"""
+    detections: List[InferenceResult]
+    """Детекции на кадре"""
+
+
 class DetectedAndClassifiedObject(BaseModel):
     """ Датакласс данных которые будут возвращены сервисом (детекция и классификация) """
     object_bbox: List[InferenceResult] | None
     """ Координаты объекта """
+
+
+class DetectionAndClassificationVideodataOutput(BaseModel):
+    """Датаконтракт выхода сервиса"""
+    objects: List[FrameDetection]
+    """Список объектов"""
