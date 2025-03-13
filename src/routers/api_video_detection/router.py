@@ -31,6 +31,7 @@ router = APIRouter(
 @router.post("/video_detection")
 async def video_detection(video: UploadFile = File(...),
                           confidence_thershold: float = service_config_python.detectors_params.confidence_thershold,
+                          nms_threshold: float = service_config_python.detectors_params.nms_threshold,
                           model: str = 'yolo11m',
                           model_format: str = 'pt',
                           use_cuda: bool = service_config_python.detectors_params.use_cuda) -> VideoDetection | None:
@@ -79,7 +80,8 @@ async def video_detection(video: UploadFile = File(...),
         ret, frame = cap.read()
         if not ret:
             break
-        detections = model(frame, device=device)
+        detections = model.predict(frame, device=device, conf=confidence_thershold,
+                                   iou=nms_threshold,)
         frame_results = []
 
         for row in detections:

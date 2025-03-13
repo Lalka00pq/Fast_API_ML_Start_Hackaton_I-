@@ -1,183 +1,817 @@
-2025-03-12 19:31:58,685 - fastapi - INFO - Конфигурация сервиса: .\src\configs\service_config.json
-2025-03-12 19:31:58,703 - fastapi - INFO - Конфигурация сервиса: .\src\configs\service_config.json
-2025-03-12 19:31:58,719 - uvicorn.error - INFO - Started server process [18332]
-2025-03-12 19:31:58,721 - uvicorn.error - INFO - Waiting for application startup.
-2025-03-12 19:31:58,723 - uvicorn.error - INFO - Application startup complete.
-2025-03-12 19:31:58,730 - uvicorn.error - INFO - Uvicorn running on http://localhost:8000 (Press CTRL+C to quit)
-2025-03-12 19:32:03,286 - uvicorn.access - INFO - 127.0.0.1:54745 - "GET /docs HTTP/1.1" 200
-2025-03-12 19:32:03,841 - uvicorn.access - INFO - 127.0.0.1:54745 - "GET /openapi.json HTTP/1.1" 200
-2025-03-12 19:32:07,705 - fastapi - INFO - Мониторинг сервиса запущен
-2025-03-12 19:32:09,725 - uvicorn.access - INFO - ::1:54902 - "GET /health HTTP/1.1" 200
-2025-03-12 19:32:09,727 - fastapi - INFO - Сервис работает исправно
-2025-03-12 19:32:16,164 - fastapi - INFO - Используется GPU
-2025-03-12 19:32:16,168 - fastapi - INFO - Модель загружена
-2025-03-12 19:32:16,168 - fastapi - INFO - Модель YOLO() загружена, формат onnx
-2025-03-12 19:32:21,514 - fastapi - INFO - Обработан кадр 0, найдено 10 объектов
-2025-03-12 19:32:21,590 - fastapi - INFO - Обработан кадр 1, найдено 8 объектов
-2025-03-12 19:32:21,656 - fastapi - INFO - Обработан кадр 2, найдено 1 объектов
-2025-03-12 19:32:21,720 - fastapi - INFO - Обработан кадр 3, найдено 0 объектов
-2025-03-12 19:32:21,787 - fastapi - INFO - Обработан кадр 4, найдено 1 объектов
-2025-03-12 19:32:21,855 - fastapi - INFO - Обработан кадр 5, найдено 1 объектов
-2025-03-12 19:32:21,925 - fastapi - INFO - Обработан кадр 6, найдено 8 объектов
-2025-03-12 19:32:21,997 - fastapi - INFO - Обработан кадр 7, найдено 11 объектов
-2025-03-12 19:32:22,073 - fastapi - INFO - Обработан кадр 8, найдено 4 объектов
-2025-03-12 19:32:22,142 - fastapi - INFO - Обработан кадр 9, найдено 4 объектов
-2025-03-12 19:32:22,208 - fastapi - INFO - Обработан кадр 10, найдено 41 объектов
-2025-03-12 19:32:22,275 - fastapi - INFO - Обработан кадр 11, найдено 31 объектов
-2025-03-12 19:32:22,339 - fastapi - INFO - Обработан кадр 12, найдено 34 объектов
-2025-03-12 19:32:22,403 - fastapi - INFO - Обработан кадр 13, найдено 39 объектов
-2025-03-12 19:32:22,468 - fastapi - INFO - Обработан кадр 14, найдено 41 объектов
-2025-03-12 19:32:22,533 - fastapi - INFO - Обработан кадр 15, найдено 48 объектов
-2025-03-12 19:32:22,601 - fastapi - INFO - Обработан кадр 16, найдено 47 объектов
-2025-03-12 19:32:22,665 - fastapi - INFO - Обработан кадр 17, найдено 41 объектов
-2025-03-12 19:32:22,733 - fastapi - INFO - Обработан кадр 18, найдено 50 объектов
-2025-03-12 19:32:22,801 - fastapi - INFO - Обработан кадр 19, найдено 42 объектов
-2025-03-12 19:32:22,871 - fastapi - INFO - Обработан кадр 20, найдено 44 объектов
-2025-03-12 19:32:22,939 - fastapi - INFO - Обработан кадр 21, найдено 43 объектов
-2025-03-12 19:32:23,005 - fastapi - INFO - Обработан кадр 22, найдено 27 объектов
-2025-03-12 19:32:23,069 - fastapi - INFO - Обработан кадр 23, найдено 27 объектов
-2025-03-12 19:32:23,137 - fastapi - INFO - Обработан кадр 24, найдено 23 объектов
-2025-03-12 19:32:23,209 - fastapi - INFO - Обработан кадр 25, найдено 24 объектов
-2025-03-12 19:32:23,269 - fastapi - INFO - Обработан кадр 26, найдено 5 объектов
-2025-03-12 19:32:23,328 - fastapi - INFO - Обработан кадр 27, найдено 2 объектов
-2025-03-12 19:32:23,388 - fastapi - INFO - Обработан кадр 28, найдено 2 объектов
-2025-03-12 19:32:23,447 - fastapi - INFO - Обработан кадр 29, найдено 2 объектов
-2025-03-12 19:32:23,507 - fastapi - INFO - Обработан кадр 30, найдено 2 объектов
-2025-03-12 19:32:23,574 - fastapi - INFO - Обработан кадр 31, найдено 53 объектов
-2025-03-12 19:32:23,640 - fastapi - INFO - Обработан кадр 32, найдено 55 объектов
-2025-03-12 19:32:23,705 - fastapi - INFO - Обработан кадр 33, найдено 48 объектов
-2025-03-12 19:32:23,778 - fastapi - INFO - Обработан кадр 34, найдено 30 объектов
-2025-03-12 19:32:23,845 - fastapi - INFO - Обработан кадр 35, найдено 21 объектов
-2025-03-12 19:32:23,916 - fastapi - INFO - Обработан кадр 36, найдено 29 объектов
-2025-03-12 19:32:23,981 - fastapi - INFO - Обработан кадр 37, найдено 46 объектов
-2025-03-12 19:32:24,046 - fastapi - INFO - Обработан кадр 38, найдено 48 объектов
-2025-03-12 19:32:24,111 - fastapi - INFO - Обработан кадр 39, найдено 50 объектов
-2025-03-12 19:32:24,177 - fastapi - INFO - Обработан кадр 40, найдено 48 объектов
-2025-03-12 19:32:24,244 - fastapi - INFO - Обработан кадр 41, найдено 46 объектов
-2025-03-12 19:32:24,310 - fastapi - INFO - Обработан кадр 42, найдено 48 объектов
-2025-03-12 19:32:24,377 - fastapi - INFO - Обработан кадр 43, найдено 49 объектов
-2025-03-12 19:32:24,443 - fastapi - INFO - Обработан кадр 44, найдено 47 объектов
-2025-03-12 19:32:24,511 - fastapi - INFO - Обработан кадр 45, найдено 49 объектов
-2025-03-12 19:32:24,594 - fastapi - INFO - Обработан кадр 46, найдено 47 объектов
-2025-03-12 19:32:24,671 - fastapi - INFO - Обработан кадр 47, найдено 49 объектов
-2025-03-12 19:32:24,744 - fastapi - INFO - Обработан кадр 48, найдено 48 объектов
-2025-03-12 19:32:24,816 - fastapi - INFO - Обработан кадр 49, найдено 51 объектов
-2025-03-12 19:32:24,886 - fastapi - INFO - Обработан кадр 50, найдено 50 объектов
-2025-03-12 19:32:24,957 - fastapi - INFO - Обработан кадр 51, найдено 47 объектов
-2025-03-12 19:32:25,028 - fastapi - INFO - Обработан кадр 52, найдено 47 объектов
-2025-03-12 19:32:25,098 - fastapi - INFO - Обработан кадр 53, найдено 44 объектов
-2025-03-12 19:32:25,167 - fastapi - INFO - Обработан кадр 54, найдено 37 объектов
-2025-03-12 19:32:25,232 - fastapi - INFO - Обработан кадр 55, найдено 37 объектов
-2025-03-12 19:32:25,299 - fastapi - INFO - Обработан кадр 56, найдено 43 объектов
-2025-03-12 19:32:25,363 - fastapi - INFO - Обработан кадр 57, найдено 38 объектов
-2025-03-12 19:32:25,429 - fastapi - INFO - Обработан кадр 58, найдено 34 объектов
-2025-03-12 19:32:25,492 - fastapi - INFO - Обработан кадр 59, найдено 25 объектов
-2025-03-12 19:32:25,554 - fastapi - INFO - Обработан кадр 60, найдено 22 объектов
-2025-03-12 19:32:25,618 - fastapi - INFO - Обработан кадр 61, найдено 20 объектов
-2025-03-12 19:32:25,681 - fastapi - INFO - Обработан кадр 62, найдено 27 объектов
-2025-03-12 19:32:25,744 - fastapi - INFO - Обработан кадр 63, найдено 26 объектов
-2025-03-12 19:32:25,807 - fastapi - INFO - Обработан кадр 64, найдено 21 объектов
-2025-03-12 19:32:25,870 - fastapi - INFO - Обработан кадр 65, найдено 26 объектов
-2025-03-12 19:32:25,933 - fastapi - INFO - Обработан кадр 66, найдено 21 объектов
-2025-03-12 19:32:25,997 - fastapi - INFO - Обработан кадр 67, найдено 17 объектов
-2025-03-12 19:32:26,059 - fastapi - INFO - Обработан кадр 68, найдено 15 объектов
-2025-03-12 19:32:26,121 - fastapi - INFO - Обработан кадр 69, найдено 19 объектов
-2025-03-12 19:32:26,185 - fastapi - INFO - Обработан кадр 70, найдено 19 объектов
-2025-03-12 19:32:26,249 - fastapi - INFO - Обработан кадр 71, найдено 18 объектов
-2025-03-12 19:32:26,312 - fastapi - INFO - Обработан кадр 72, найдено 20 объектов
-2025-03-12 19:32:26,374 - fastapi - INFO - Обработан кадр 73, найдено 17 объектов
-2025-03-12 19:32:26,435 - fastapi - INFO - Обработан кадр 74, найдено 17 объектов
-2025-03-12 19:32:26,499 - fastapi - INFO - Обработан кадр 75, найдено 18 объектов
-2025-03-12 19:32:26,564 - fastapi - INFO - Обработан кадр 76, найдено 17 объектов
-2025-03-12 19:32:26,628 - fastapi - INFO - Обработан кадр 77, найдено 18 объектов
-2025-03-12 19:32:26,690 - fastapi - INFO - Обработан кадр 78, найдено 18 объектов
-2025-03-12 19:32:26,755 - fastapi - INFO - Обработан кадр 79, найдено 18 объектов
-2025-03-12 19:32:26,819 - fastapi - INFO - Обработан кадр 80, найдено 18 объектов
-2025-03-12 19:32:26,884 - fastapi - INFO - Обработан кадр 81, найдено 19 объектов
-2025-03-12 19:32:26,964 - fastapi - INFO - Обработан кадр 82, найдено 20 объектов
-2025-03-12 19:32:27,027 - fastapi - INFO - Обработан кадр 83, найдено 23 объектов
-2025-03-12 19:32:27,091 - fastapi - INFO - Обработан кадр 84, найдено 24 объектов
-2025-03-12 19:32:27,156 - fastapi - INFO - Обработан кадр 85, найдено 23 объектов
-2025-03-12 19:32:27,223 - fastapi - INFO - Обработан кадр 86, найдено 22 объектов
-2025-03-12 19:32:27,291 - fastapi - INFO - Обработан кадр 87, найдено 22 объектов
-2025-03-12 19:32:27,360 - fastapi - INFO - Обработан кадр 88, найдено 25 объектов
-2025-03-12 19:32:27,425 - fastapi - INFO - Обработан кадр 89, найдено 23 объектов
-2025-03-12 19:32:27,491 - fastapi - INFO - Обработан кадр 90, найдено 24 объектов
-2025-03-12 19:32:27,556 - fastapi - INFO - Обработан кадр 91, найдено 21 объектов
-2025-03-12 19:32:27,622 - fastapi - INFO - Обработан кадр 92, найдено 24 объектов
-2025-03-12 19:32:27,688 - fastapi - INFO - Обработан кадр 93, найдено 24 объектов
-2025-03-12 19:32:27,754 - fastapi - INFO - Обработан кадр 94, найдено 25 объектов
-2025-03-12 19:32:27,819 - fastapi - INFO - Обработан кадр 95, найдено 25 объектов
-2025-03-12 19:32:27,885 - fastapi - INFO - Обработан кадр 96, найдено 25 объектов
-2025-03-12 19:32:27,954 - fastapi - INFO - Обработан кадр 97, найдено 30 объектов
-2025-03-12 19:32:28,020 - fastapi - INFO - Обработан кадр 98, найдено 25 объектов
-2025-03-12 19:32:28,083 - fastapi - INFO - Обработан кадр 99, найдено 26 объектов
-2025-03-12 19:32:28,150 - fastapi - INFO - Обработан кадр 100, найдено 27 объектов
-2025-03-12 19:32:28,217 - fastapi - INFO - Обработан кадр 101, найдено 28 объектов
-2025-03-12 19:32:28,283 - fastapi - INFO - Обработан кадр 102, найдено 31 объектов
-2025-03-12 19:32:28,351 - fastapi - INFO - Обработан кадр 103, найдено 30 объектов
-2025-03-12 19:32:28,418 - fastapi - INFO - Обработан кадр 104, найдено 26 объектов
-2025-03-12 19:32:28,484 - fastapi - INFO - Обработан кадр 105, найдено 35 объектов
-2025-03-12 19:32:28,552 - fastapi - INFO - Обработан кадр 106, найдено 23 объектов
-2025-03-12 19:32:28,618 - fastapi - INFO - Обработан кадр 107, найдено 26 объектов
-2025-03-12 19:32:28,688 - fastapi - INFO - Обработан кадр 108, найдено 30 объектов
-2025-03-12 19:32:28,754 - fastapi - INFO - Обработан кадр 109, найдено 31 объектов
-2025-03-12 19:32:28,822 - fastapi - INFO - Обработан кадр 110, найдено 33 объектов
-2025-03-12 19:32:28,893 - fastapi - INFO - Обработан кадр 111, найдено 36 объектов
-2025-03-12 19:32:28,964 - fastapi - INFO - Обработан кадр 112, найдено 29 объектов
-2025-03-12 19:32:29,036 - fastapi - INFO - Обработан кадр 113, найдено 37 объектов
-2025-03-12 19:32:29,123 - fastapi - INFO - Обработан кадр 114, найдено 39 объектов
-2025-03-12 19:32:29,192 - fastapi - INFO - Обработан кадр 115, найдено 27 объектов
-2025-03-12 19:32:29,258 - fastapi - INFO - Обработан кадр 116, найдено 28 объектов
-2025-03-12 19:32:29,325 - fastapi - INFO - Обработан кадр 117, найдено 35 объектов
-2025-03-12 19:32:29,394 - fastapi - INFO - Обработан кадр 118, найдено 33 объектов
-2025-03-12 19:32:29,464 - fastapi - INFO - Обработан кадр 119, найдено 36 объектов
-2025-03-12 19:32:29,536 - fastapi - INFO - Обработан кадр 120, найдено 39 объектов
-2025-03-12 19:32:29,603 - fastapi - INFO - Обработан кадр 121, найдено 42 объектов
-2025-03-12 19:32:29,672 - fastapi - INFO - Обработан кадр 122, найдено 38 объектов
-2025-03-12 19:32:29,743 - fastapi - INFO - Обработан кадр 123, найдено 35 объектов
-2025-03-12 19:32:29,807 - fastapi - INFO - Обработан кадр 124, найдено 4 объектов
-2025-03-12 19:32:29,871 - fastapi - INFO - Обработан кадр 125, найдено 9 объектов
-2025-03-12 19:32:29,934 - fastapi - INFO - Обработан кадр 126, найдено 8 объектов
-2025-03-12 19:32:29,996 - fastapi - INFO - Обработан кадр 127, найдено 2 объектов
-2025-03-12 19:32:30,057 - fastapi - INFO - Обработан кадр 128, найдено 11 объектов
-2025-03-12 19:32:30,119 - fastapi - INFO - Обработан кадр 129, найдено 12 объектов
-2025-03-12 19:32:30,179 - fastapi - INFO - Обработан кадр 130, найдено 2 объектов
-2025-03-12 19:32:30,238 - fastapi - INFO - Обработан кадр 131, найдено 11 объектов
-2025-03-12 19:32:30,298 - fastapi - INFO - Обработан кадр 132, найдено 9 объектов
-2025-03-12 19:32:30,358 - fastapi - INFO - Обработан кадр 133, найдено 10 объектов
-2025-03-12 19:32:30,418 - fastapi - INFO - Обработан кадр 134, найдено 5 объектов
-2025-03-12 19:32:30,478 - fastapi - INFO - Обработан кадр 135, найдено 4 объектов
-2025-03-12 19:32:30,537 - fastapi - INFO - Обработан кадр 136, найдено 7 объектов
-2025-03-12 19:32:30,574 - fastapi - INFO - Видео обработано
-2025-03-12 19:32:30,589 - uvicorn.access - INFO - ::1:55143 - "GET /health HTTP/1.1" 200
-2025-03-12 19:32:30,592 - fastapi - INFO - Сервис работает исправно
-2025-03-12 19:32:30,601 - uvicorn.access - INFO - 127.0.0.1:54972 - "POST /video_detection?confidence_thershold=0.25&model=yolo11m&model_format=onnx&use_cuda=true HTTP/1.1" 200
-2025-03-12 19:32:50,618 - uvicorn.access - INFO - ::1:55384 - "GET /health HTTP/1.1" 200
-2025-03-12 19:32:50,620 - fastapi - INFO - Сервис работает исправно
-2025-03-12 19:33:10,626 - uvicorn.access - INFO - ::1:55619 - "GET /health HTTP/1.1" 200
-2025-03-12 19:33:10,628 - fastapi - INFO - Сервис работает исправно
-2025-03-12 19:33:30,644 - uvicorn.access - INFO - ::1:55843 - "GET /health HTTP/1.1" 200
-2025-03-12 19:33:30,647 - fastapi - INFO - Сервис работает исправно
-2025-03-12 19:33:50,661 - uvicorn.access - INFO - ::1:56072 - "GET /health HTTP/1.1" 200
-2025-03-12 19:33:50,663 - fastapi - INFO - Сервис работает исправно
-2025-03-12 19:34:10,671 - uvicorn.access - INFO - ::1:56303 - "GET /health HTTP/1.1" 200
-2025-03-12 19:34:10,673 - fastapi - INFO - Сервис работает исправно
-2025-03-12 19:34:30,679 - uvicorn.access - INFO - ::1:56530 - "GET /health HTTP/1.1" 200
-2025-03-12 19:34:30,682 - fastapi - INFO - Сервис работает исправно
-2025-03-12 19:34:50,693 - uvicorn.access - INFO - ::1:56761 - "GET /health HTTP/1.1" 200
-2025-03-12 19:34:50,695 - fastapi - INFO - Сервис работает исправно
-2025-03-12 19:35:10,702 - uvicorn.access - INFO - ::1:56988 - "GET /health HTTP/1.1" 200
-2025-03-12 19:35:10,705 - fastapi - INFO - Сервис работает исправно
-2025-03-12 19:35:30,723 - uvicorn.access - INFO - ::1:57318 - "GET /health HTTP/1.1" 200
-2025-03-12 19:35:30,725 - fastapi - INFO - Сервис работает исправно
-2025-03-12 19:35:50,738 - uvicorn.access - INFO - ::1:57559 - "GET /health HTTP/1.1" 200
-2025-03-12 19:35:50,741 - fastapi - INFO - Сервис работает исправно
-2025-03-12 19:36:10,761 - uvicorn.access - INFO - ::1:57796 - "GET /health HTTP/1.1" 200
-2025-03-12 19:36:10,763 - fastapi - INFO - Сервис работает исправно
-2025-03-12 19:36:30,778 - uvicorn.access - INFO - ::1:58025 - "GET /health HTTP/1.1" 200
-2025-03-12 19:36:30,780 - fastapi - INFO - Сервис работает исправно
-2025-03-12 19:36:42,586 - uvicorn.error - INFO - Shutting down
-2025-03-12 19:36:42,695 - uvicorn.error - INFO - Waiting for application shutdown.
-2025-03-12 19:36:42,696 - uvicorn.error - INFO - Application shutdown complete.
-2025-03-12 19:36:42,698 - uvicorn.error - INFO - Finished server process [18332]
+2025-03-13 13:30:51,227 - fastapi - INFO - Конфигурация сервиса: .\src\configs\service_config.json
+2025-03-13 13:30:51,246 - fastapi - INFO - Конфигурация сервиса: .\src\configs\service_config.json
+2025-03-13 13:30:51,261 - uvicorn.error - INFO - Started server process [4600]
+2025-03-13 13:30:51,263 - uvicorn.error - INFO - Waiting for application startup.
+2025-03-13 13:30:51,266 - uvicorn.error - INFO - Application startup complete.
+2025-03-13 13:30:51,274 - uvicorn.error - INFO - Uvicorn running on http://localhost:8000 (Press CTRL+C to quit)
+2025-03-13 13:30:59,421 - fastapi - INFO - Мониторинг сервиса запущен
+2025-03-13 13:31:01,443 - uvicorn.access - INFO - ::1:64254 - "GET /health HTTP/1.1" 200
+2025-03-13 13:31:01,448 - fastapi - INFO - Сервис работает исправно
+2025-03-13 13:31:21,457 - uvicorn.access - INFO - ::1:64497 - "GET /health HTTP/1.1" 200
+2025-03-13 13:31:21,460 - fastapi - INFO - Сервис работает исправно
+2025-03-13 13:31:41,465 - uvicorn.access - INFO - ::1:64738 - "GET /health HTTP/1.1" 200
+2025-03-13 13:31:41,468 - fastapi - INFO - Сервис работает исправно
+2025-03-13 13:31:59,139 - uvicorn.access - INFO - 127.0.0.1:65044 - "POST /video_detection?confidence_thershold=0.7&nms_threshold=0.5&model=yolo11m&model_format=pt&use_cuda=true HTTP/1.1" 422
+2025-03-13 13:32:01,475 - uvicorn.access - INFO - ::1:65073 - "GET /health HTTP/1.1" 200
+2025-03-13 13:32:01,478 - fastapi - INFO - Сервис работает исправно
+2025-03-13 13:32:21,485 - uvicorn.access - INFO - ::1:65318 - "GET /health HTTP/1.1" 200
+2025-03-13 13:32:21,487 - fastapi - INFO - Сервис работает исправно
+2025-03-13 13:32:37,226 - fastapi - INFO - Используется GPU
+2025-03-13 13:32:37,337 - fastapi - INFO - Модель загружена
+2025-03-13 13:32:37,344 - fastapi - INFO - Модель YOLO(
+  (model): DetectionModel(
+    (model): Sequential(
+      (0): Conv(
+        (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): SiLU(inplace=True)
+      )
+      (1): Conv(
+        (conv): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): SiLU(inplace=True)
+      )
+      (2): C3k2(
+        (cv1): Conv(
+          (conv): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU(inplace=True)
+        )
+        (cv2): Conv(
+          (conv): Conv2d(192, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU(inplace=True)
+        )
+        (m): ModuleList(
+          (0): C3k(
+            (cv1): Conv(
+              (conv): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(32, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (cv2): Conv(
+              (conv): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(32, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (cv3): Conv(
+              (conv): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (m): Sequential(
+              (0): Bottleneck(
+                (cv1): Conv(
+                  (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(32, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+                (cv2): Conv(
+                  (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(32, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+              )
+              (1): Bottleneck(
+                (cv1): Conv(
+                  (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(32, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+                (cv2): Conv(
+                  (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(32, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+              )
+            )
+          )
+        )
+      )
+      (3): Conv(
+        (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): SiLU(inplace=True)
+      )
+      (4): C3k2(
+        (cv1): Conv(
+          (conv): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU(inplace=True)
+        )
+        (cv2): Conv(
+          (conv): Conv2d(384, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU(inplace=True)
+        )
+        (m): ModuleList(
+          (0): C3k(
+            (cv1): Conv(
+              (conv): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (cv2): Conv(
+              (conv): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (cv3): Conv(
+              (conv): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (m): Sequential(
+              (0): Bottleneck(
+                (cv1): Conv(
+                  (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+                (cv2): Conv(
+                  (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+              )
+              (1): Bottleneck(
+                (cv1): Conv(
+                  (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+                (cv2): Conv(
+                  (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+              )
+            )
+          )
+        )
+      )
+      (5): Conv(
+        (conv): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): SiLU(inplace=True)
+      )
+      (6): C3k2(
+        (cv1): Conv(
+          (conv): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU(inplace=True)
+        )
+        (cv2): Conv(
+          (conv): Conv2d(768, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU(inplace=True)
+        )
+        (m): ModuleList(
+          (0): C3k(
+            (cv1): Conv(
+              (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (cv2): Conv(
+              (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (cv3): Conv(
+              (conv): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (m): Sequential(
+              (0): Bottleneck(
+                (cv1): Conv(
+                  (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+                (cv2): Conv(
+                  (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+              )
+              (1): Bottleneck(
+                (cv1): Conv(
+                  (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+                (cv2): Conv(
+                  (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+              )
+            )
+          )
+        )
+      )
+      (7): Conv(
+        (conv): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): SiLU(inplace=True)
+      )
+      (8): C3k2(
+        (cv1): Conv(
+          (conv): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU(inplace=True)
+        )
+        (cv2): Conv(
+          (conv): Conv2d(768, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU(inplace=True)
+        )
+        (m): ModuleList(
+          (0): C3k(
+            (cv1): Conv(
+              (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (cv2): Conv(
+              (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (cv3): Conv(
+              (conv): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (m): Sequential(
+              (0): Bottleneck(
+                (cv1): Conv(
+                  (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+                (cv2): Conv(
+                  (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+              )
+              (1): Bottleneck(
+                (cv1): Conv(
+                  (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+                (cv2): Conv(
+                  (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+              )
+            )
+          )
+        )
+      )
+      (9): SPPF(
+        (cv1): Conv(
+          (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU(inplace=True)
+        )
+        (cv2): Conv(
+          (conv): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU(inplace=True)
+        )
+        (m): MaxPool2d(kernel_size=5, stride=1, padding=2, dilation=1, ceil_mode=False)
+      )
+      (10): C2PSA(
+        (cv1): Conv(
+          (conv): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU(inplace=True)
+        )
+        (cv2): Conv(
+          (conv): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU(inplace=True)
+        )
+        (m): Sequential(
+          (0): PSABlock(
+            (attn): Attention(
+              (qkv): Conv(
+                (conv): Conv2d(256, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                (act): Identity()
+              )
+              (proj): Conv(
+                (conv): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                (act): Identity()
+              )
+              (pe): Conv(
+                (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=256, bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                (act): Identity()
+              )
+            )
+            (ffn): Sequential(
+              (0): Conv(
+                (conv): Conv2d(256, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                (act): SiLU(inplace=True)
+              )
+              (1): Conv(
+                (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                (act): Identity()
+              )
+            )
+          )
+        )
+      )
+      (11): Upsample(scale_factor=2.0, mode='nearest')
+      (12): Concat()
+      (13): C3k2(
+        (cv1): Conv(
+          (conv): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU(inplace=True)
+        )
+        (cv2): Conv(
+          (conv): Conv2d(768, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU(inplace=True)
+        )
+        (m): ModuleList(
+          (0): C3k(
+            (cv1): Conv(
+              (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (cv2): Conv(
+              (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (cv3): Conv(
+              (conv): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (m): Sequential(
+              (0): Bottleneck(
+                (cv1): Conv(
+                  (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+                (cv2): Conv(
+                  (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+              )
+              (1): Bottleneck(
+                (cv1): Conv(
+                  (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+                (cv2): Conv(
+                  (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+              )
+            )
+          )
+        )
+      )
+      (14): Upsample(scale_factor=2.0, mode='nearest')
+      (15): Concat()
+      (16): C3k2(
+        (cv1): Conv(
+          (conv): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU(inplace=True)
+        )
+        (cv2): Conv(
+          (conv): Conv2d(384, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU(inplace=True)
+        )
+        (m): ModuleList(
+          (0): C3k(
+            (cv1): Conv(
+              (conv): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (cv2): Conv(
+              (conv): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (cv3): Conv(
+              (conv): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (m): Sequential(
+              (0): Bottleneck(
+                (cv1): Conv(
+                  (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+                (cv2): Conv(
+                  (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+              )
+              (1): Bottleneck(
+                (cv1): Conv(
+                  (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+                (cv2): Conv(
+                  (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+              )
+            )
+          )
+        )
+      )
+      (17): Conv(
+        (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): SiLU(inplace=True)
+      )
+      (18): Concat()
+      (19): C3k2(
+        (cv1): Conv(
+          (conv): Conv2d(768, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU(inplace=True)
+        )
+        (cv2): Conv(
+          (conv): Conv2d(768, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU(inplace=True)
+        )
+        (m): ModuleList(
+          (0): C3k(
+            (cv1): Conv(
+              (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (cv2): Conv(
+              (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (cv3): Conv(
+              (conv): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (m): Sequential(
+              (0): Bottleneck(
+                (cv1): Conv(
+                  (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+                (cv2): Conv(
+                  (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+              )
+              (1): Bottleneck(
+                (cv1): Conv(
+                  (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+                (cv2): Conv(
+                  (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+              )
+            )
+          )
+        )
+      )
+      (20): Conv(
+        (conv): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): SiLU(inplace=True)
+      )
+      (21): Concat()
+      (22): C3k2(
+        (cv1): Conv(
+          (conv): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU(inplace=True)
+        )
+        (cv2): Conv(
+          (conv): Conv2d(768, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU(inplace=True)
+        )
+        (m): ModuleList(
+          (0): C3k(
+            (cv1): Conv(
+              (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (cv2): Conv(
+              (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (cv3): Conv(
+              (conv): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (m): Sequential(
+              (0): Bottleneck(
+                (cv1): Conv(
+                  (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+                (cv2): Conv(
+                  (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+              )
+              (1): Bottleneck(
+                (cv1): Conv(
+                  (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+                (cv2): Conv(
+                  (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                  (act): SiLU(inplace=True)
+                )
+              )
+            )
+          )
+        )
+      )
+      (23): Detect(
+        (cv2): ModuleList(
+          (0): Sequential(
+            (0): Conv(
+              (conv): Conv2d(256, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (1): Conv(
+              (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (2): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (1-2): 2 x Sequential(
+            (0): Conv(
+              (conv): Conv2d(512, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (1): Conv(
+              (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): SiLU(inplace=True)
+            )
+            (2): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+          )
+        )
+        (cv3): ModuleList(
+          (0): Sequential(
+            (0): Sequential(
+              (0): DWConv(
+                (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=256, bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                (act): SiLU(inplace=True)
+              )
+              (1): Conv(
+                (conv): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                (act): SiLU(inplace=True)
+              )
+            )
+            (1): Sequential(
+              (0): DWConv(
+                (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=256, bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                (act): SiLU(inplace=True)
+              )
+              (1): Conv(
+                (conv): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                (act): SiLU(inplace=True)
+              )
+            )
+            (2): Conv2d(256, 6, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (1-2): 2 x Sequential(
+            (0): Sequential(
+              (0): DWConv(
+                (conv): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=512, bias=False)
+                (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                (act): SiLU(inplace=True)
+              )
+              (1): Conv(
+                (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                (act): SiLU(inplace=True)
+              )
+            )
+            (1): Sequential(
+              (0): DWConv(
+                (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=256, bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                (act): SiLU(inplace=True)
+              )
+              (1): Conv(
+                (conv): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                (act): SiLU(inplace=True)
+              )
+            )
+            (2): Conv2d(256, 6, kernel_size=(1, 1), stride=(1, 1))
+          )
+        )
+        (dfl): DFL(
+          (conv): Conv2d(16, 1, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        )
+      )
+    )
+  )
+) загружена, формат pt
+2025-03-13 13:32:39,520 - fastapi - INFO - Обработан кадр 0, найдено 9 объектов
+2025-03-13 13:32:39,585 - fastapi - INFO - Обработан кадр 1, найдено 7 объектов
+2025-03-13 13:32:39,655 - fastapi - INFO - Обработан кадр 2, найдено 1 объектов
+2025-03-13 13:32:39,714 - fastapi - INFO - Обработан кадр 3, найдено 0 объектов
+2025-03-13 13:32:39,771 - fastapi - INFO - Обработан кадр 4, найдено 0 объектов
+2025-03-13 13:32:39,829 - fastapi - INFO - Обработан кадр 5, найдено 1 объектов
+2025-03-13 13:32:39,889 - fastapi - INFO - Обработан кадр 6, найдено 2 объектов
+2025-03-13 13:32:39,950 - fastapi - INFO - Обработан кадр 7, найдено 4 объектов
+2025-03-13 13:32:40,007 - fastapi - INFO - Обработан кадр 8, найдено 3 объектов
+2025-03-13 13:32:40,065 - fastapi - INFO - Обработан кадр 9, найдено 3 объектов
+2025-03-13 13:32:40,126 - fastapi - INFO - Обработан кадр 10, найдено 19 объектов
+2025-03-13 13:32:40,187 - fastapi - INFO - Обработан кадр 11, найдено 15 объектов
+2025-03-13 13:32:40,249 - fastapi - INFO - Обработан кадр 12, найдено 18 объектов
+2025-03-13 13:32:40,315 - fastapi - INFO - Обработан кадр 13, найдено 16 объектов
+2025-03-13 13:32:40,381 - fastapi - INFO - Обработан кадр 14, найдено 16 объектов
+2025-03-13 13:32:40,444 - fastapi - INFO - Обработан кадр 15, найдено 19 объектов
+2025-03-13 13:32:40,538 - fastapi - INFO - Обработан кадр 16, найдено 18 объектов
+2025-03-13 13:32:40,626 - fastapi - INFO - Обработан кадр 17, найдено 15 объектов
+2025-03-13 13:32:40,715 - fastapi - INFO - Обработан кадр 18, найдено 10 объектов
+2025-03-13 13:32:40,793 - fastapi - INFO - Обработан кадр 19, найдено 14 объектов
+2025-03-13 13:32:40,855 - fastapi - INFO - Обработан кадр 20, найдено 13 объектов
+2025-03-13 13:32:40,918 - fastapi - INFO - Обработан кадр 21, найдено 10 объектов
+2025-03-13 13:32:40,978 - fastapi - INFO - Обработан кадр 22, найдено 7 объектов
+2025-03-13 13:32:41,035 - fastapi - INFO - Обработан кадр 23, найдено 6 объектов
+2025-03-13 13:32:41,095 - fastapi - INFO - Обработан кадр 24, найдено 7 объектов
+2025-03-13 13:32:41,156 - fastapi - INFO - Обработан кадр 25, найдено 6 объектов
+2025-03-13 13:32:41,212 - fastapi - INFO - Обработан кадр 26, найдено 0 объектов
+2025-03-13 13:32:41,267 - fastapi - INFO - Обработан кадр 27, найдено 0 объектов
+2025-03-13 13:32:41,321 - fastapi - INFO - Обработан кадр 28, найдено 0 объектов
+2025-03-13 13:32:41,376 - fastapi - INFO - Обработан кадр 29, найдено 0 объектов
+2025-03-13 13:32:41,437 - fastapi - INFO - Обработан кадр 30, найдено 0 объектов
+2025-03-13 13:32:41,507 - fastapi - INFO - Обработан кадр 31, найдено 42 объектов
+2025-03-13 13:32:41,571 - fastapi - INFO - Обработан кадр 32, найдено 39 объектов
+2025-03-13 13:32:41,639 - fastapi - INFO - Обработан кадр 33, найдено 42 объектов
+2025-03-13 13:32:41,701 - fastapi - INFO - Обработан кадр 34, найдено 27 объектов
+2025-03-13 13:32:41,766 - fastapi - INFO - Обработан кадр 35, найдено 20 объектов
+2025-03-13 13:32:41,826 - fastapi - INFO - Обработан кадр 36, найдено 21 объектов
+2025-03-13 13:32:41,889 - fastapi - INFO - Обработан кадр 37, найдено 35 объектов
+2025-03-13 13:32:41,954 - fastapi - INFO - Обработан кадр 38, найдено 39 объектов
+2025-03-13 13:32:42,023 - fastapi - INFO - Обработан кадр 39, найдено 39 объектов
+2025-03-13 13:32:42,093 - fastapi - INFO - Обработан кадр 40, найдено 35 объектов
+2025-03-13 13:32:42,171 - fastapi - INFO - Обработан кадр 41, найдено 36 объектов
+2025-03-13 13:32:42,235 - fastapi - INFO - Обработан кадр 42, найдено 34 объектов
+2025-03-13 13:32:42,305 - fastapi - INFO - Обработан кадр 43, найдено 34 объектов
+2025-03-13 13:32:42,371 - fastapi - INFO - Обработан кадр 44, найдено 35 объектов
+2025-03-13 13:32:42,437 - fastapi - INFO - Обработан кадр 45, найдено 31 объектов
+2025-03-13 13:32:42,503 - fastapi - INFO - Обработан кадр 46, найдено 33 объектов
+2025-03-13 13:32:42,563 - fastapi - INFO - Обработан кадр 47, найдено 31 объектов
+2025-03-13 13:32:42,630 - fastapi - INFO - Обработан кадр 48, найдено 34 объектов
+2025-03-13 13:32:42,695 - fastapi - INFO - Обработан кадр 49, найдено 31 объектов
+2025-03-13 13:32:42,760 - fastapi - INFO - Обработан кадр 50, найдено 32 объектов
+2025-03-13 13:32:42,825 - fastapi - INFO - Обработан кадр 51, найдено 33 объектов
+2025-03-13 13:32:42,889 - fastapi - INFO - Обработан кадр 52, найдено 32 объектов
+2025-03-13 13:32:42,954 - fastapi - INFO - Обработан кадр 53, найдено 23 объектов
+2025-03-13 13:32:43,027 - fastapi - INFO - Обработан кадр 54, найдено 22 объектов
+2025-03-13 13:32:43,089 - fastapi - INFO - Обработан кадр 55, найдено 21 объектов
+2025-03-13 13:32:43,153 - fastapi - INFO - Обработан кадр 56, найдено 21 объектов
+2025-03-13 13:32:43,217 - fastapi - INFO - Обработан кадр 57, найдено 23 объектов
+2025-03-13 13:32:43,279 - fastapi - INFO - Обработан кадр 58, найдено 21 объектов
+2025-03-13 13:32:43,339 - fastapi - INFO - Обработан кадр 59, найдено 16 объектов
+2025-03-13 13:32:43,400 - fastapi - INFO - Обработан кадр 60, найдено 13 объектов
+2025-03-13 13:32:43,462 - fastapi - INFO - Обработан кадр 61, найдено 12 объектов
+2025-03-13 13:32:43,522 - fastapi - INFO - Обработан кадр 62, найдено 10 объектов
+2025-03-13 13:32:43,585 - fastapi - INFO - Обработан кадр 63, найдено 10 объектов
+2025-03-13 13:32:43,651 - fastapi - INFO - Обработан кадр 64, найдено 10 объектов
+2025-03-13 13:32:43,712 - fastapi - INFO - Обработан кадр 65, найдено 15 объектов
+2025-03-13 13:32:43,778 - fastapi - INFO - Обработан кадр 66, найдено 9 объектов
+2025-03-13 13:32:43,839 - fastapi - INFO - Обработан кадр 67, найдено 10 объектов
+2025-03-13 13:32:43,899 - fastapi - INFO - Обработан кадр 68, найдено 10 объектов
+2025-03-13 13:32:43,961 - fastapi - INFO - Обработан кадр 69, найдено 9 объектов
+2025-03-13 13:32:44,018 - fastapi - INFO - Обработан кадр 70, найдено 7 объектов
+2025-03-13 13:32:44,079 - fastapi - INFO - Обработан кадр 71, найдено 11 объектов
+2025-03-13 13:32:44,136 - fastapi - INFO - Обработан кадр 72, найдено 11 объектов
+2025-03-13 13:32:44,197 - fastapi - INFO - Обработан кадр 73, найдено 12 объектов
+2025-03-13 13:32:44,257 - fastapi - INFO - Обработан кадр 74, найдено 12 объектов
+2025-03-13 13:32:44,314 - fastapi - INFO - Обработан кадр 75, найдено 14 объектов
+2025-03-13 13:32:44,366 - fastapi - INFO - Обработан кадр 76, найдено 9 объектов
+2025-03-13 13:32:44,419 - fastapi - INFO - Обработан кадр 77, найдено 10 объектов
+2025-03-13 13:32:44,475 - fastapi - INFO - Обработан кадр 78, найдено 12 объектов
+2025-03-13 13:32:44,531 - fastapi - INFO - Обработан кадр 79, найдено 15 объектов
+2025-03-13 13:32:44,584 - fastapi - INFO - Обработан кадр 80, найдено 16 объектов
+2025-03-13 13:32:44,638 - fastapi - INFO - Обработан кадр 81, найдено 14 объектов
+2025-03-13 13:32:44,693 - fastapi - INFO - Обработан кадр 82, найдено 9 объектов
+2025-03-13 13:32:44,748 - fastapi - INFO - Обработан кадр 83, найдено 12 объектов
+2025-03-13 13:32:44,803 - fastapi - INFO - Обработан кадр 84, найдено 14 объектов
+2025-03-13 13:32:44,857 - fastapi - INFO - Обработан кадр 85, найдено 17 объектов
+2025-03-13 13:32:44,910 - fastapi - INFO - Обработан кадр 86, найдено 11 объектов
+2025-03-13 13:32:44,961 - fastapi - INFO - Обработан кадр 87, найдено 10 объектов
+2025-03-13 13:32:45,015 - fastapi - INFO - Обработан кадр 88, найдено 10 объектов
+2025-03-13 13:32:45,068 - fastapi - INFO - Обработан кадр 89, найдено 9 объектов
+2025-03-13 13:32:45,124 - fastapi - INFO - Обработан кадр 90, найдено 8 объектов
+2025-03-13 13:32:45,179 - fastapi - INFO - Обработан кадр 91, найдено 13 объектов
+2025-03-13 13:32:45,235 - fastapi - INFO - Обработан кадр 92, найдено 18 объектов
+2025-03-13 13:32:45,292 - fastapi - INFO - Обработан кадр 93, найдено 18 объектов
+2025-03-13 13:32:45,348 - fastapi - INFO - Обработан кадр 94, найдено 19 объектов
+2025-03-13 13:32:45,404 - fastapi - INFO - Обработан кадр 95, найдено 17 объектов
+2025-03-13 13:32:45,457 - fastapi - INFO - Обработан кадр 96, найдено 16 объектов
+2025-03-13 13:32:45,512 - fastapi - INFO - Обработан кадр 97, найдено 13 объектов
+2025-03-13 13:32:45,569 - fastapi - INFO - Обработан кадр 98, найдено 16 объектов
+2025-03-13 13:32:45,623 - fastapi - INFO - Обработан кадр 99, найдено 17 объектов
+2025-03-13 13:32:45,680 - fastapi - INFO - Обработан кадр 100, найдено 12 объектов
+2025-03-13 13:32:45,735 - fastapi - INFO - Обработан кадр 101, найдено 16 объектов
+2025-03-13 13:32:45,788 - fastapi - INFO - Обработан кадр 102, найдено 12 объектов
+2025-03-13 13:32:45,841 - fastapi - INFO - Обработан кадр 103, найдено 10 объектов
+2025-03-13 13:32:45,896 - fastapi - INFO - Обработан кадр 104, найдено 12 объектов
+2025-03-13 13:32:45,948 - fastapi - INFO - Обработан кадр 105, найдено 13 объектов
+2025-03-13 13:32:45,999 - fastapi - INFO - Обработан кадр 106, найдено 7 объектов
+2025-03-13 13:32:46,052 - fastapi - INFO - Обработан кадр 107, найдено 13 объектов
+2025-03-13 13:32:46,104 - fastapi - INFO - Обработан кадр 108, найдено 9 объектов
+2025-03-13 13:32:46,161 - fastapi - INFO - Обработан кадр 109, найдено 17 объектов
+2025-03-13 13:32:46,215 - fastapi - INFO - Обработан кадр 110, найдено 14 объектов
+2025-03-13 13:32:46,269 - fastapi - INFO - Обработан кадр 111, найдено 15 объектов
+2025-03-13 13:32:46,322 - fastapi - INFO - Обработан кадр 112, найдено 14 объектов
+2025-03-13 13:32:46,381 - fastapi - INFO - Обработан кадр 113, найдено 17 объектов
+2025-03-13 13:32:46,435 - fastapi - INFO - Обработан кадр 114, найдено 10 объектов
+2025-03-13 13:32:46,488 - fastapi - INFO - Обработан кадр 115, найдено 10 объектов
+2025-03-13 13:32:46,541 - fastapi - INFO - Обработан кадр 116, найдено 8 объектов
+2025-03-13 13:32:46,596 - fastapi - INFO - Обработан кадр 117, найдено 13 объектов
+2025-03-13 13:32:46,649 - fastapi - INFO - Обработан кадр 118, найдено 10 объектов
+2025-03-13 13:32:46,703 - fastapi - INFO - Обработан кадр 119, найдено 9 объектов
+2025-03-13 13:32:46,755 - fastapi - INFO - Обработан кадр 120, найдено 8 объектов
+2025-03-13 13:32:46,808 - fastapi - INFO - Обработан кадр 121, найдено 11 объектов
+2025-03-13 13:32:46,860 - fastapi - INFO - Обработан кадр 122, найдено 7 объектов
+2025-03-13 13:32:46,912 - fastapi - INFO - Обработан кадр 123, найдено 7 объектов
+2025-03-13 13:32:46,961 - fastapi - INFO - Обработан кадр 124, найдено 0 объектов
+2025-03-13 13:32:47,014 - fastapi - INFO - Обработан кадр 125, найдено 7 объектов
+2025-03-13 13:32:47,063 - fastapi - INFO - Обработан кадр 126, найдено 4 объектов
+2025-03-13 13:32:47,114 - fastapi - INFO - Обработан кадр 127, найдено 1 объектов
+2025-03-13 13:32:47,164 - fastapi - INFO - Обработан кадр 128, найдено 7 объектов
+2025-03-13 13:32:47,215 - fastapi - INFO - Обработан кадр 129, найдено 11 объектов
+2025-03-13 13:32:47,265 - fastapi - INFO - Обработан кадр 130, найдено 2 объектов
+2025-03-13 13:32:47,318 - fastapi - INFO - Обработан кадр 131, найдено 7 объектов
+2025-03-13 13:32:47,367 - fastapi - INFO - Обработан кадр 132, найдено 9 объектов
+2025-03-13 13:32:47,421 - fastapi - INFO - Обработан кадр 133, найдено 5 объектов
+2025-03-13 13:32:47,471 - fastapi - INFO - Обработан кадр 134, найдено 2 объектов
+2025-03-13 13:32:47,523 - fastapi - INFO - Обработан кадр 135, найдено 2 объектов
+2025-03-13 13:32:47,578 - fastapi - INFO - Обработан кадр 136, найдено 3 объектов
+2025-03-13 13:32:47,622 - fastapi - INFO - Видео обработано
+2025-03-13 13:32:47,632 - uvicorn.access - INFO - ::1:49185 - "GET /health HTTP/1.1" 200
+2025-03-13 13:32:47,633 - fastapi - INFO - Сервис работает исправно
+2025-03-13 13:32:47,645 - uvicorn.access - INFO - 127.0.0.1:65505 - "POST /video_detection?confidence_thershold=0.7&nms_threshold=0.5&model=yolo11m&model_format=pt&use_cuda=true HTTP/1.1" 200
+2025-03-13 13:33:07,641 - uvicorn.access - INFO - ::1:49776 - "GET /health HTTP/1.1" 200
+2025-03-13 13:33:07,645 - fastapi - INFO - Сервис работает исправно
+2025-03-13 13:33:27,652 - uvicorn.access - INFO - ::1:50079 - "GET /health HTTP/1.1" 200
+2025-03-13 13:33:27,655 - fastapi - INFO - Сервис работает исправно
+2025-03-13 13:33:47,660 - uvicorn.access - INFO - ::1:50326 - "GET /health HTTP/1.1" 200
+2025-03-13 13:33:47,661 - fastapi - INFO - Сервис работает исправно
